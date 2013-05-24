@@ -17,5 +17,3 @@ webshell
 本项目提供的工具，禁止从事非法活动，此项目，仅供测试，所造成的一切后果，与本人无关。
 
 Author：tennc
-
-http://tennc.github.io/webshell
