@@ -1,0 +1,50 @@
+input.button { background-color: #EF9C00; 
+		  color: #8C5900;
+          border: 2px outset #EF9C00; }
+input.button:Hover { color: #444444 }
+
+input { background-color:#FDEBCF;
+	    border: 2px inset #FDEBCF }
+	   
+table.filelist { background-color:#FDE2B8; 
+        		 width:100%; 
+        		 border:3px solid #ffffff }
+th { background-color:#BC001D; 
+	 font-size: 10pt; 
+	 color:#022F55 }
+
+tr.mouseout { background-color:#F5BA5C; }
+tr.mouseout td {border:1px solid #F5BA5C;}
+
+tr.mousein  { background-color:#EF9C00; }
+tr.mousein td { border-top:1px solid #3399ff;
+				border-bottom:1px solid #3399FF;
+				border-left:1px solid #EF9C00;
+				border-right:1px solid #EF9C00; }
+tr.checked  { background-color:#B57600 }
+tr.checked td {border:1px solid #B57600;}
+
+tr.mousechecked { background-color:#8C5900 }
+tr.mousechecked td {border:1px solid #8C5900;}
+
+td { font-family:Verdana, Arial, Helvetica, sans-serif; 
+	 font-size: 7pt; 
+	 color: #FFF5E8; }
+
+td.message { background-color: #FFFF00; 
+			 color: #000000; 
+			 text-align:center; 
+			 font-weight:bold } 
+.formular {margin: 1px; background-color:#ffffff; padding: 1em; border:1px solid #000000;}
+.formular2 {margin: 1px;}
+
+A { text-decoration: none; 
+    color: #005073
+  }
+A:Hover { color : #022F55; 
+		  text-decoration : underline; }
+BODY { font-family:Verdana, Arial, Helvetica, sans-serif; 
+	   font-size: 8pt; 
+	   color: #666666;
+	   background-color: #FDE2B8;
+	 }
