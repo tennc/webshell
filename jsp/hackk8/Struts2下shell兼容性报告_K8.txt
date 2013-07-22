@@ -1,0 +1,54 @@
+
+struts2 环境下 jspshell 功能测试 2013.5.23  by 拉登哥哥
+看下这个报告 你们就知道 为啥s2上传的shell成功率低的原因了
+上传不成功或内容被过滤是另外的事  上传成功的shell没被过滤又不解析或报错 就是以下原因了
+
+struts 2.2.1.1 默认环境下 以下报告是在这版本下的 别的版本未知
+好像默认环境没带有IO操作 还有 org.apache.jasper(S2文件上传组件)
+自己找了无组件上传的jsp 也报废... 
+
+
+K8收集的(其实之前也在网上问人要来的一些 wooyun某群群主 还有其它成员)
+
+k8cmd.jsp 兼容性非常好 不管在s2 还是普通环境下都正常使用 
+实战 支持Win/Linux 还有执行的命令通过飞刀加密发送
+
+普通 cmd.jsp啥的  可以使用 不用说了 但是在linux下不行
+
+other下面的大马 丢到struts2环境下 没一个能正常解析的
+
+JspWebshell 1.2.jsp  能解析 但上传不了文件 好像是马写的有问题
+
+JavaShell.jsp jsp-reverse.jsp 也不能解析
+
+kbaidu8.jsp 兼容性8错 哥专用的 原版 jspspy 1.0 但是上传文件也是失败的 1.2版本的直接报废
+
+Customize.jsp 菜刀的jsp马 本地s2环境 报错 连接上也可以操作
+实战 通过struts2的洞 上传过去的 功能就废了(linux下) win的还未测试
+
+JSP无组件实现WEB上传.rar 也失效
+
+一句话jsp那个 可以传过去  但是无法写出文件
+
+
+77收集的几个 Win下测试
+
+browser.jsp 可以使用 但是文件上传功能报废 原因都是这个组件 org.apache.jasper
+
+还有是cmd相关的也可用 也只是win下的
+
+其它都是直接报废。。。。。
+
+法客工具包里的jsp
+no.jsp 其实是那个什么jsfoloer改的 也是上传文件功能不行 别的功能未测
+silic webshell.jsp 和no.jsp in.jsp都是jsfoloer改的
+
+JspSpyJDK5.jsp 报废
+
+ma2.jsp 能解析 但上传文件那失败 java.io.IOException: 这就是IO了
+ma3.jsp 直接报废 因为使用的是jasper
+ma1.jsp 和ma4.jsp job.jsp探针 能正常解析
+spjspshell.jsp 直接报废 同ma3.jsp 用的组件一样
+
+总结: 普通单纯执行cmd一类的都能正常运行，探针也是 个别大马也勉强 jspspy 1.0兼容性 比较靠普
+在这些样本里90%都挂了 实战中 也许有些站加了上传组件啥的 可能部分上传脚本还是能用的 具体自测
