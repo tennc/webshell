@@ -1,0 +1,50 @@
+README for PerlWebShell 0.1
+Copyright (C) 2004 Florian Rossol <rossol@yola.in-berlin.de>
+Copyright (C) 2000-2003 Martin Geisler <gimpster@gimpster.com>
+Licensed under the GNU GPL. See the file COPYING for details.
+
+What is PerlWebShell?
+------------------
+PerlWebShell is a shell wrapped in a Perl/CGI script. It's a tool you
+can use to execute arbitrary shell-commands or browse the filesystem
+on your remote webserver. This replaces, to a degree, a normal
+telnet-connection. You can use it for transferring your site as a
+compressed file, and then unpack it on the webserver, administration
+and maintenance of your website using commands like ps, free, du, df
+etc...
+
+PerlWebShell is based on PhpShell
+(http://www.gimpster.com/wiki/PhpShell) from Martin Geisler. In fact
+it tries to be nearly the same with one little difference:
+PerlWebShell uses Perl/CGI instead of PHP (not difficult to guess
+cause of the name!). Also this README is based on Martins
+README. Thanks Martin for releasing PhpShell under the GNU GPL.
+
+Limitations
+-----------
+There are some limitations on what kind of programs you can run.  It
+won't do no good if you start something like Netscape or even vi.  All
+programs have to be strictly command-line programs, and they will have
+no chance of getting user input after they have been lunched.  They
+probably also have to terminate within some time, depending on the
+settings of your ISP.
+
+But you can rely on all the normal shell-functionality, like pipes,
+output and input redirection, etc... 
+
+Who am I?
+---------
+You may not be the same user when using PerlWebShell, as you are when you
+upload your files with ftp. On some systems you will be 'nobody', on
+other systems you will become 'httpd' or 'www-data'.  This is a rather
+dangerous "feature" of PerlWebShell! So use it at your own risk --- I
+wont be responsible if your account is closed or something like that
+happens.
+
+How to use it
+-------------
+Point your browser to perlwebshell.cgi. The rest should be selfexplaining. 
+
+Download
+--------
+You can download PerlWebShell from http://yola.in-berlin.de/perlwebshell.

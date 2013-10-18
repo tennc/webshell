@@ -1,0 +1,29 @@
+Installation instructions for PerlWebShell 0.1
+Copyright (C) 2004 Florian Rossol <rossol@yola.in-berlin.de>
+Copyright (C) 2000-2003 Martin Geisler <gimpster@gimpster.com>
+Licensed under the GNU GPL. See the file COPYING for details.
+
+
+Getting the tarball
+-------------------
+You can always get the latest version from here:
+
+  http://yola.in-berlin.de/perlwebshell/
+
+
+Installation
+------------
+Installation is easy: first unpack the tarball or zipfile into the
+CGI-directory of your webserver.  This will create a subdirectory
+called perlwebshell-0.1.
+
+You should use some password protection for the directory of
+PerlWebShell. Otherwise everybody out there can delete/modify your
+files.
+
+Bugs?
+-----
+If you find a bug or miss something in PerlWebShell, please don't hesitate
+to mail me at <rossol@yola.in-berlin.de>!
+
+Enjoy! - Florian Rossol <rossol@yola.in-berlin.de>
