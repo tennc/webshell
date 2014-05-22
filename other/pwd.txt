@@ -1,0 +1,1043 @@
+############  弱密码  ############
+a1b2c3
+password
+12345-9
+qwerty
+abc123
+monkey
+xiaoming
+admin
+5201314
+p@assword
+qq123456
+taobao
+wang1234
+fuckU
+buzhidao
+princess
+rockyou
+666666
+88888
+letmein
+trustno1
+dragon
+baseball
+111111
+iloveyou
+master
+sunshine
+ashley
+bailey
+passw0rd
+shadow
+123123
+654321
+superman
+qazwsx
+michael
+football
+手机号码
+生日/纪念日
+身份证号
+名字
+身份证后六位
+名字的拼音+生日
+
+===========CSDN 密码榜top 100 =========
+第 1 名: 123456789 - 235033 次
+第 2 名: 12345678 - 212751 次
+第 3 名: 11111111 - 76346 次
+第 4 名: dearbook - 46054 次
+第 5 名: 00000000 - 34952 次
+第 6 名: 123123123 - 19986 次
+第 7 名: 1234567890 - 17791 次
+第 8 名: 88888888 - 15033 次
+第 9 名: 111111111 - 6995 次
+第 10 名: 147258369 - 5966 次
+第 11 名: aaaaaaaa - 5890 次
+第 12 名: 987654321 - 5553 次
+第 13 名: 1111111111 - 5145 次
+第 14 名: 66666666 - 5025 次
+第 15 名: a123456789 - 4686 次
+第 16 名: 11223344 - 4096 次
+第 17 名: 1qaz2wsx - 3962 次
+第 18 名: xiazhili - 3649 次
+第 19 名: password - 3647 次
+第 20 名: 789456123 - 3610 次
+第 21 名: qwertyuiop - 3504 次
+第 22 名: qqqqqqqq - 3491 次
+第 23 名: iloveyou - 3294 次
+第 24 名: qq123456 - 3287 次
+第 25 名: 87654321 - 3281 次
+第 26 名: 000000000 - 3175 次
+第 27 名: asdfghjkl - 3100 次
+第 28 名: 31415926 - 3061 次
+第 29 名: 12344321 - 2985 次
+第 30 名: 1q2w3e4r - 2943 次
+第 31 名: 0000000000 - 2886 次
+第 32 名: qazwsxedc - 2770 次
+第 33 名: 123456abc - 2751 次
+第 34 名: abcd1234 - 2612 次
+第 35 名: 0123456789 - 2578 次
+第 36 名: 123654789 - 2573 次
+第 37 名: 12121212 - 2540 次
+第 38 名: asdasdasd - 2437 次
+第 39 名: 12341234 - 2380 次
+第 40 名: 110110110 - 2348 次
+第 41 名: abc123456 - 2338 次
+第 42 名: aa123456 - 2298 次
+第 43 名: a12345678 - 2245 次
+第 44 名: 22222222 - 2243 次
+第 45 名: 1234qwer - 2218 次
+第 46 名: a1234567 - 2216 次
+第 47 名: 123321123 - 2166 次
+第 48 名: qwertyui - 2165 次
+第 49 名: 123456 - 2141 次
+第 50 名: 123456123 - 2113 次
+第 51 名: 123456789a - 2110 次
+第 52 名: 123456aa - 2058 次
+第 53 名: asdfasdf - 2023 次
+第 54 名: 99999999 - 1891 次
+第 55 名: 999999999 - 1859 次
+第 56 名: 123456123456 - 1854 次
+第 57 名: 520520520 - 1699 次
+第 58 名: 963852741 - 1656 次
+第 59 名: 55555555 - 1652 次
+第 60 名: 741852963 - 1652 次
+第 61 名: 33333333 - 1589 次
+第 62 名: qwer1234 - 1573 次
+第 63 名: asd123456 - 1464 次
+第 64 名: qweasdzxc - 1413 次
+第 65 名: zzzzzzzz - 1343 次
+第 66 名: 77777777 - 1339 次
+第 67 名: code8925 - 1286 次
+第 68 名: 11112222 - 1273 次
+第 69 名: ms0083jxj - 1268 次
+第 70 名: 123456qq - 1267 次
+第 71 名: qweqweqwe - 1263 次
+第 72 名: 111222333 - 1214 次
+第 73 名: asdf1234 - 1203 次
+第 74 名: 3.1415926 - 1200 次
+第 75 名: asdfghjk - 1159 次
+第 76 名: 147852369 - 1148 次
+第 77 名: q1w2e3r4 - 1140 次
+第 78 名: 521521521 - 1136 次
+第 79 名: 12345678A - 1121 次
+第 80 名: 123qweasd - 1116 次
+第 81 名: 123698745 - 1111 次
+第 82 名: 1123581321 - 1109 次
+第 83 名: 1234abcd - 1085 次
+第 84 名: WOAINI1314 - 1067 次
+第 85 名: 1qazxsw2 - 1036 次
+第 86 名: woaiwojia - 1016 次
+第 87 名: zxcvbnm123 - 952 次
+第 88 名: 321321321 - 920 次
+第 89 名: 05962514787 - 910 次
+第 90 名: wwwwwwww - 907 次
+第 91 名: 123456987 - 894 次
+第 92 名: kingcom5 - 892 次
+第 93 名: 5845201314 - 882 次
+第 94 名: 0987654321 - 853 次
+第 95 名: 11111111111111111111 - 835 次
+第 96 名: 123456asd - 829 次
+第 97 名: 1q2w3e4r5t - 819 次
+第 98 名: 12345600 - 805 次
+第 99 名: lilylily - 784 次
+第 100 名: 11235813 - 783 次
+
+=========shell常用密码==========
+
+!@#123
+*******
+000
+1
+10011C120105101
+111
+12
+123
+123!@#
+123321
+12345
+123456
+123654
+123654789
+123654789!
+123654789.
+123go
+1314520
+133135136
+13572468
+19880118
+1992724
+20080808
+3452510
+360
+360sb
+376186027
+3est
+45189946
+4816535
+4lert
+4ngel
+520
+52013
+5201314
+5201314
+520hack
+521
+535039
+54321
+584521
+654321
+654321
+80sec
+847381979
+847381979
+888999
+96315001
+981246
+admin
+admin888
+aiezu
+air
+angel
+aoyunhui
+asp
+aspadmin
+aspxadmin
+axiao
+baidu
+baiduadmin
+baidusb
+Baike
+bzxyd
+bzxyd
+C
+caodan
+caonima
+caonimade
+caonimadebi
+caonimei
+cc
+ceshi2009
+chengnuo
+chenxue
+chinared
+chuang
+cmdshell
+cms
+cnot
+dangdang
+danteng
+dantong
+daohao
+daoke
+daoker
+daokers
+daoqq
+darkst
+dreamh
+et520
+Evav
+evil
+evilhack
+evilhacker
+evilhk
+F.S.T
+f19ht
+fclshark
+fight
+fst
+fuck
+fucker
+fuckhack
+fuckhacker
+fuckit
+FuckYou
+G.xp
+ghost
+ghost
+gxp
+h4ck
+h4ck3r
+hack
+hack520
+hacker
+hackersb
+hackqingshu
+hacksb
+hake
+hakecc
+haode
+heixiaozi
+hkk007
+hkmjj
+hkmm
+hongker
+honker
+HqzX
+huaidan
+iamnotadmin
+iloveshell
+jcksyes
+jiaozhu
+jiaozu
+jing
+jinjin
+jspadmin
+jtk2352
+kill
+kissy
+lcx
+lengfeng
+lengfengsk
+lengxue
+lin
+liner
+login
+love
+lovehack7758
+lover
+loveshell
+lunnijie
+lx
+maek
+mama
+mama520
+nc
+noadmin
+nohack
+noid
+ouou
+phpadmin
+qingshu
+qingshu$
+r4sky
+rensheng
+rfkl
+rinima
+rs
+rusuan
+sa
+sadness
+sasa
+Satan
+sb
+sb360
+sh3ll
+shaomo
+shell
+shunzi
+sin
+spider
+sq19880602
+sunzi
+sz
+T00ls
+tag
+tengxin
+tengxunsb
+tig
+tiger
+tonecan
+tx
+ufo
+ufohack
+username
+webadmin
+webadmin2
+WebShell
+whatweb
+windows
+winner
+wocaonima
+worinima
+wrsk
+wrsky
+wuzheng
+wwwhakecc
+xiaoe
+xiaowu
+xiaoyi
+xxoxx
+xxxxx
+ying
+yong
+youaresb
+youguest
+yrpx
+yuemo
+yushiwuzheng
+yy
+yyswxws
+zhack
+====================================
+国内各类 WebShell 后门密码大全
+
+ 6.0 VIP(防破解版
+12345
+-
+yanghai或者168888
+
+（中国数据）
+rinima   / . / tg
+
+[D.s.T]会员专用WebShell
+darkst
+
+[HxHacK]华夏黑客联盟
+192298273208298273192298273185298273187298273195298273
+
+[华夏黑客小豪]Shell
+xiaohao
+
+【HACKYONG】最终版
+haode
+
+【冷风技术吧】专版
+13822642918
+
+="【gg】专版
+gg
+121
+13311
+
+2010贺岁版 免杀 WebShell
+admin
+
+3E Security Team
+3est
+
+55
+147852
+
+80sec内部专用过世界杀软休积最小功能超强超猛宇宙第一asp
+hkmm
+
+80s专版 -
+beyond
+
+80S专用WebShell -
+beyond
+
+aiezu
+981246
+
+asp    黑客→kissy
+ceshi2009
+
+ASPAdmin_A
+5556661221
+
+ASPXSpy
+19880118
+
+asp马儿
+admin
+
+ASP木马
+ding130694343
+
+Asp站长助手6.0
+584521
+
+baidu｝"
+baidu
+
+Baiki-"
+1
+
+by ⊿﹏儍气网络
+596861877
+
+by H4ck3rx7
+7
+
+by OT小组
+panda
+
+BY：ヽ譕淚ツ緈福
+wxb630513
+
+By：菜得很
+2010或者20010或者110或者2012或者sh
+
+BY：荭、色调
+lzh
+
+by：空气
+yrpx
+
+by:小楼仔仔
+linyu520
+
+CnWxy
+978332153
+
+Dark Security Team
+yuemo
+
+Dark
+376186027
+
+E.V.A.V 专 用 网 马『修改版』
+13572468
+
+Evil sadness
+5201314
+
+Evil sadness
+admin
+
+Evil sadness
+admin123
+
+Evil sadness
+jtk2352
+
+Evil sadness
+noid
+
+Evil sadness
+xiekekevin@123hyj123
+
+F.S.T 海盗内部版.!别外传噢。by 海盗
+654321
+
+F.S.T 海盗内部版.!别外传噢。by 海盗
+jinjinWebShell
+
+F.S.T 联盟交流群内部版!!!别外传噢
+000
+
+F.S.T 联盟交流群内部版!!!别外传噢!!!
+yong
+
+F.S.T 联盟交流群内部版!!!别外传噢!!!"
+xm
+
+F.S.T 联盟交流群内部版!!!别外传噢!!!"
+zhu
+
+F.S.T 联盟交流群内部版.!别外传噢
+rfkl
+
+FACKYOU你妹啊
+maomao3
+
+From the empty soul
+latcue
+
+fuck you
+123go
+
+G.xp 专用
+133135136
+
+G.xp 专用
+133135136Satan或者1992724
+
+GHOST永久免杀ASP木马 ghost
+yuemo
+
+H U C 专用版 By_80S
+beyond
+
+H4ck Door
+5121705或123
+
+Hacked By CHINA!
+china
+
+hacked by liner
+lin
+
+hackop专用ASP木马
+135
+
+HACKYCZ
+8585392
+
+Hack失去
+xiaobai
+
+Hack小龙专用WebShell
+123456
+
+hkxs Door
+hkmm
+
+HqzX、HqzX's Blog
+C
+
+JFeng
+sq19880602
+
+JspX
+4lert
+
+Login
+888999
+
+login蓝色
+5909062xzx
+
+MadDog_L专用
+1024
+
+maek dream
+hacker
+
+MASK专用 shell
+mask
+
+Michael、T 专用asp提权木马
+hacker
+
+Miracle个人专用
+12
+
+mr.con asp小马
+*******
+
+No Backdoor Webshell(刀)
+admin
+
+nohack WebShell免杀版 - Beta3
+8420910
+
+Password:
+winner
+
+QQ 372688478""技术的精纯及无私的奉献才是我们最大的追求"
+542531
+
+'Rose
+123456
+
+Sam,asp大马修正加强版 QQ:42466841
+mama520
+
+Satan
+1992724
+
+Scott专用QQ：404094313
+574787
+
+Shell
+xxxxx
+
+'T00ls - 低调求发展 -
+jiejie
+
+Thé、End.゛
+and或者QQ：913720787
+
+TNTHK小组内部版
+TNTHK
+
+ＴＸ－网络专用ASP木马
+axiao
+
+user login
+007007
+
+username
+847381979
+
+webadmin2
+webadmin
+
+WebShell 夜鹰专版
+cmder
+
+WebSHell
+195298273203298273193298273193298273203298273
+
+web综合安全评测 - Beta3
+nohack
+
+windows
+123
+
+Www.Hack1990.Com
+hack19或者914
+
+Wxy小组成员：阿布
+8585392
+
+Xwei.` 专版
+qqq
+XXXXX
+rinima
+
+yes黑客联盟 QQ：80026840"
+1
+
+爱哇ASP木马 LoveWa
+simin
+
+安全检测 {BY：網丄邻居} |
+tonecan
+
+暗组超强功能修正去后门加强S-U提权版
+123
+
+暗组超强功能修正去后门加强S-U提权版
+hkk007
+
+奥运专版网站维护工具(加强版
+20080808
+
+奥运专版网站维护工具(加强版)"
+killEdu
+
+败家简单去后门
+sin
+
+冰鱼
+520或者yy520
+
+超强版
+admin
+
+传说中的草泥马4.0
+a或者admin
+
+村长
+1478523或maya66
+
+带免杀的AspShell小马
+hxhack
+
+蛋蛋WebShell鼠年贺岁版
+123456
+
+蛋蛋WEBSHELL鼠年增强版
+dangdang
+
+懂你味道
+wangluoheishou  / caodan
+
+独占天涯友情检测大马
+123456
+
+独自等待专用
+123
+
+二大爷改版
+hhtzgh
+
+帆仔专用
+5242129
+
+飞飞专用 shell
+131524
+
+风修正简洁免杀豪华版
+1
+
+工欲善其事 必先利其器
+xuexue
+
+攻防无绝对，技术无黑白rl0KWY
+1024
+
+管理登录 - 程序网络工作组ASP站点管理员 V1.02
+admin
+
+黑冰 专 用 网 马『修改版』
+sunhao
+
+黑客风云[www.05112.org]
+Acces
+
+黑客官方
+chengnuo
+
+黑客官方-长期提供网站入侵,破解 数据库入侵
+chengnuo
+
+黑客网站之家 美化版
+chenxue
+
+黑鹰专用WEBSHELL
+96315001
+
+黑勇士shell勇士版
+654321
+
+黑羽基地免杀asp大马
+5201314
+
+黑羽技术论坛
+kaifeng
+
+潶色
+1234
+
+红盟安全网超强功能终极免杀VIP版
+13141234567
+
+红盟太子
+iolhcw19891209
+
+洪城黑客联盟-小豪专用ASP木马
+nishiwodeshei
+
+华中帝国ASP木马QQ:860100371
+xiaoke
+
+华中帝国培训基地2010迎新年专版
+beyond
+
+皇朝红客安全网 By:小赞  QQ965407897
+
+xiaozan
+
+火狐ASP木马(超强版)" 华夏五周年庆典版
+wrsk
+
+火狐ASP木马(超强版)"
+wrsk
+
+技术的精纯及无私的奉献才是我们最大的追求
+478421259
+
+静流个人专版"
+64559216或者697467
+
+绝色神偷
+baiduwocaoni74
+
+蓝色灭杀
+ghost
+
+狼牙红刺
+aishang
+
+冷血
+12
+
+林浩网络工作室
+maya66
+
+靈魂◆安全小组+"
+10011C120105101
+
+龙雨完全去后门
+97086407
+
+路遥知马力
+sq19880602  /  123
+
+妹子,走着!"
+xiaobai
+
+灭绝师太
+1024或520
+
+内谁
+4911687
+
+那阁专用 QQ:858158308"
+10086
+
+拼今生,對花對酒,爲伊落泪
+admin$
+
+品名东方 QQ85345458
+4133133
+
+去演绎神话吧'
+zhack
+
+锐子专用大马
+aa296419130
+
+沙漠之烟
+4816535
+
+闪电
+yanhua
+
+商业
+qwe32100
+
+少龙
+123456jin
+
+少龙网络专版大马
+123456
+
+圣诞节
+love
+
+史上最强ASP木马
+5121705
+
+思易免杀ASP木马3.0（最新两款）
+admin
+
+随风自由的泪
+jcksyes
+
+岁月联盟 （?Copyright (C) 2004 Security Angel Team [SYUE] All Rights Reserved.）
+hehe
+
+太子
+chengmin
+
+唐宋元明清╯"
+bzxyd
+
+提权Uz4s版本
+axiao
+
+提权网专版
+123456
+
+同一世界同一梦想！tlm
+204298273196298273197298273
+
+网站自带程序，请勿删除
+seo0510
+
+围剿专版 +口令
+yuemo
+
+围剿专版
+yuemo或者5201314
+
+伟
+winner
+
+伟大的农民
+521
+
+未知数X
+45189946
+
+我要进去’
+bzxyd   /    jcksyesHacker
+
+我专用滴哈` By:VL?-娶你ˉqq:164319296
+116166
+
+无尽的渗透
+NTIw
+
+无尽的渗透
+NTIw或YXBwbGVxaQ==
+
+无味
+woaizuozuo
+
+无我专版
+jieshao
+
+乄缘來④妳专版免杀asp大马
+lovehack7758
+
+西域小刚-站长助手-修改版本
+xxoxx
+
+萧萧文件管理
+et520
+
+小淡个人专用asp木马
+4422663
+
+小刚asp木马
+2131321
+
+小黑专用ASP木马(超强版)
+xiaoyu
+
+小军专用 shell
+小军xiaojun
+
+小凯
+a
+
+小凯专用webshell大马
+soojoy
+
+小可最炫ASP木马
+xiaoke
+
+小强asp木马
+laoduo
+
+
+小武来了
+535039   / 1
+
+小小黑客精美提权超强版
+123
+
+小小黑客精美提权超强版
+1992
+
+笑佛天下
+cnot
+
+邪恶的装逼大叔冰菊
+admin
+
+心动吧ASP超级提权修正加强版20080124
+123321
+
+夜狼黑客基地[Scott 、]"
+574787
+
+银河安全网
+fclshark
+
+影子渗透优化马
+hack121314
+
+勇少
+admin或者suanle或者suanle.或者5858
+
+有一个人叫龙井
+8475352
+
+雨夜孤魂
+54321
+
+月满西楼
+sasa
+
+这是一个没有信仰的年代
+jing
+
+芝麻开门
+1273568669
+
+芝麻开门
+chuang
+
+中国红客联盟
+yangxiaochou
+
+中国冥盟
+xnhack
+
+終極丄谛专用版
+wangzi
+
+子林WebShell个人专版版
+464630316
+
+组超强功能修正去后门加强S-U提权版
+hkk007
+
+最恨VC-中国K.A.K专版免杀
+vc或者vc110
+
+最新款免杀ASP木马
+admin
+
+醉入红尘梦专版
+19860625
