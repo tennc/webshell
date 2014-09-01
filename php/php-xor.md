@@ -61,4 +61,5 @@ php.ini 中是这样用的： `E_ALL & ~E_NOTICE `
 我们写了一个小脚本为了方便生成：http://www.hackersoul.com/tools/Createbackdoor-1.php
 使用方法：`Createbackdoor-1.php?pwd=password`
 
-                                        -= END=-                                    
+url:http://hackersoul.com/post/PHP%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%8C%89%E4%BD%8D%E5%8F%96%E5%8F%8D%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E5%90%8E%E9%97%A8.html
+    -= END =- 
