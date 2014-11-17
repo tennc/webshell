@@ -39,7 +39,7 @@ ps:
 
 源码已经上github https://github.com/Svti/Axis2Shell  
 
-aar 文件https://github.com/Svti/Axis2Shell/blob/master/config.aar也在github上面，还有什么问题，可以在下面评论   
+aar 文件 https://github.com/Svti/Axis2Shell/blob/master/config.aar  也在github上面，还有什么问题，可以在下面评论   
 
 
 注意：   
