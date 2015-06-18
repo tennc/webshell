@@ -8,4 +8,7 @@ add web-backdoor
 url : https://github.com/Ridter/Pentest/tree/master/backdoor
 
 add web-backdoors
-https://github.com/all3g/fuzzdb/tree/master/web-backdoors
+url : https://github.com/all3g/fuzzdb/tree/master/web-backdoors
+
+add web-shell
+url : https://github.com/BlackArch/webshells
