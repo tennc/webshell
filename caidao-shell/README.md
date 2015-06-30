@@ -2,8 +2,13 @@
 
 需要菜刀原程序的请自行百度 or google
 
-还有一点就是  菜刀最后的版本是caidao-20111116  
+还有一点就是  菜刀最后的版本是
 
+    20141213 => 4b4a956b9c7dc734f339fa05e4c2a990(主程序)
+
+
+    caidao-20111116  
     zip压缩包的md5: 04A4980C9E86B5BA267F8E55CEAC2119
+    主程序的md5:    5001ef50c7e869253a7c152a638eab8a
 
 "一句话"的艺术——简单的编码和变形绕过检测 url: http://drops.wooyun.org/tips/839
