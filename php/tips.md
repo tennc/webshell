@@ -282,4 +282,5 @@ ob_start可以传入一个参数，也就是当缓冲流输出时调用的函数
 
 简单想一下，只有我们去控制住assert、preg_replace这类函数，才有可能防住这种漏洞。
 
-[link](http://drops.wooyun.org/tips/7279)
+[link-zh-cn](http://drops.wooyun.org/tips/7279)
+[link-en](http://translate.wooyun.io/2015/07/28/The-Secrets-of-Creating-Tips-PHP-Reverse-Backdoors.html)
