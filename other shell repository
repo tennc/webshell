@@ -12,3 +12,6 @@ url : https://github.com/all3g/fuzzdb/tree/master/web-backdoors
 
 add web-shell
 url : https://github.com/BlackArch/webshells
+
+add webshellSample
+https://github.com/tanjiti/webshellSample
