@@ -9,7 +9,7 @@ if(isset($a)) {
 ```
 
 add : source/core/php/encoder/mybase64.js
-[](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523140225737.png)
+![](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523140225737.png)
 
 ```js
 module.exports = (pwd, data) => {
@@ -20,7 +20,7 @@ module.exports = (pwd, data) => {
 ```
 
 edit : sources/core/php/index.js < add some code: regedit mybase64.js
-[](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523132374985.png)
+![](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523132374985.png)
 
 ```js
   get encoders() {
@@ -28,6 +28,6 @@ edit : sources/core/php/index.js < add some code: regedit mybase64.js
   }
 ```
 restart antsword, and add shell, select mybase64 encode  for this shell code.
-[](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523122747980.png)
+![](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523122747980.png)
 
-[](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523124431883.png)
+![](https://raw.githubusercontent.com/tennc/webshell/master/antSword/2016051523124431883.png)
