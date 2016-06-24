@@ -1939,12 +1939,10 @@ else if(isset($_GET['dos']))
     isset($_GET['exTime']) &&
     isset($_GET['port']) &&
     isset($_GET['timeout']) &&
-    isset($_GET['exTime']) &&
     $_GET['exTime'] != "" &&
     $_GET['port'] != "" &&
     $_GET['ip'] != "" &&
-    $_GET['timeout'] != "" &&
-    $_GET['exTime'] != ""
+    $_GET['timeout'] != ""
     )
     {
        $IP=$_GET['ip'];
