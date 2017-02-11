@@ -26,7 +26,8 @@ function decrypt($str,$pwd){$pwd=base64_encode($pwd);$str=base64_decode($str);$e
 @ini_set('log_errors',0);
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
-@set_magic_quotes_runtime(0);
+if (PHP_VERSION_ID < 70000)
+	@set_magic_quotes_runtime(0);
 @define('VERSION', '4.2.5');
 if(get_magic_quotes_gpc()) {
 	function stripslashes_array($array) {
