@@ -1,0 +1,9 @@
+{"b4tm4n_t00lz":[
+    { "name":"C Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.h" },
+    { "name":"Java Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.java" },
+    { "name":"Javascript Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.js" },
+    { "name":"Php Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.php" },
+    { "name":"Perl Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.pl" },
+    { "name":"Python Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.py" },
+    { "name":"Ruby Shell", "url":"https://raw.githubusercontent.com/k4mpr3t/b4tm4n-toolz/master/backconnect/back.rb" },
+]}
