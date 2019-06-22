@@ -273,7 +273,7 @@ s += SysInfo.charAt(i);
 }
 return s;
 }
-public static String uc(String str)
+<%-- public static String uc(String str)
 {
 String c="\n\r"; long d=127,  f=11, j=12, h=14,  m=31, r=83, k=1, n=8,  s=114, u=-5, v=5,a=0;
 StringBuffer sb = new StringBuffer();
@@ -291,7 +291,7 @@ for (int i = 0; i < ch.length; i++) {
 	sb.append((char)a);
 }
 return sb.toString();
-}
+} --%}
 private static int connectTimeOut = 5000;
 private static int readTimeOut = 10000;
 private static String requestEncoding = "GBK";
