@@ -18,6 +18,16 @@
 
 本项目提供的工具，禁止从事非法活动，此项目，仅供测试，所造成的一切后果，与本人无关。
 
+> ### 在扩展一个项目 
+> 1. [webshell-venom](https://github.com/yzddmr6/webshell-venom)
+> 2. 免杀webshell无限生成工具
+> 3. 免杀webshell无限生成工具(免杀一句话生成|免杀D盾|免杀安全狗护卫神河马查杀等一切waf)
+> 4. Author : yzddmr6
+> 5. 请自行鉴别
+
+
+
+
 Author ：tennc
 
 http://tennc.github.io/webshell
