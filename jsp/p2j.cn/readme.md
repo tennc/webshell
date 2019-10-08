@@ -1,6 +1,6 @@
 readme
 
-![图片](http://p2j.cn/uploads/image/20190910/20190910185302_297.png)
+![图片](https://raw.githubusercontent.com/tennc/webshell/master/jsp/p2j.cn/20190910185302_297.png)
 
 测试用例：http://localhost:8080/modules/jshell.jsp?src=new%20java.io.BufferedReader(new%20java.io.InputStreamReader(Runtime.getRuntime().exec(%22pwd%22).getInputStream())).readLine()
 
