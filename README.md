@@ -25,32 +25,28 @@
 > 4. Author : yzddmr6
 > 5. 请自行鉴别
 
+
 > ### other webshell project (old)
-> 1.[xl7dev/WebShell](https://github.com/xl7dev/WebShell)
+> 1. [xl7dev/WebShell](https://github.com/xl7dev/WebShell)
+> 2. [JohnTroony/php-webshells](https://github.com/JohnTroony/php-webshells)
+> 3. [BlackArch/webshells](https://github.com/BlackArch/webshells)
+> 4. [LandGrey/webshell-detect-bypass](https://github.com/LandGrey/webshell-detect-bypass)
+> 5. [JoyChou93/webshell](https://github.com/JoyChou93/webshell)
+> 6. [bartblaze/PHP-backdoors](https://github.com/bartblaze/PHP-backdoors)
+> 7. [WangYihang/Webshell-Sniper](https://github.com/WangYihang/Webshell-Sniper)
 
-> 2.[JohnTroony/php-webshells](https://github.com/JohnTroony/php-webshells)
-
-> 3.[BlackArch/webshells](https://github.com/BlackArch/webshells)
-
-> 4.[LandGrey/webshell-detect-bypass](https://github.com/LandGrey/webshell-detect-bypass)
-
-> 5.[JoyChou93/webshell](https://github.com/JoyChou93/webshell)
-
-> 6.[bartblaze/PHP-backdoors](https://github.com/bartblaze/PHP-backdoors)
-
-> 7.[WangYihang/Webshell-Sniper](https://github.com/WangYihang/Webshell-Sniper)
 
 > ### 顺便在推一波网站管理工具
-> 1.中国菜刀
-> 2.Cknife
-> 3.Altman
-> 4.xise
-> 5.Weevely
-> 6.quasibot
-> 7.Webshell-Sniper
-> 8.蚁剑
-> 9.冰蝎
-> 10.webacoo
+> 1. 中国菜刀
+> 2. Cknife
+> 3. Altman
+> 4. xise
+> 5. Weevely
+> 6. quasibot
+> 7. Webshell-Sniper
+> 8. 蚁剑
+> 9. 冰蝎
+> 10. webacoo
 > 以上排名不分先后
 
 
