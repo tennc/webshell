@@ -1,11 +1,7 @@
 <%@ Page Language="C#" Debug="true" %>
-
 <%@ import Namespace="System.IO"%>
-
 <%@ import Namespace="System.Xml"%>
-
 <%@ import Namespace="System.Xml.Xsl"%>
-
 <%
 
 string xml=@"<?xml version=""1.0""?><root>test</root>";
