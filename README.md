@@ -63,4 +63,4 @@ Check github releases. Latest:
 [https://github.com/tennc/webshell/releases](https://github.com/tennc/webshell/releases)
 
 ## <img src="https://raw.githubusercontent.com/tennc/webshell/master/jetbrains.png" width="400"> 
-## [jetbrains](https://www.jetbrains.com/?from=webshell)
+## Thans to [Jetbrains](https://www.jetbrains.com/?from=webshell)
