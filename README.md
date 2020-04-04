@@ -61,3 +61,5 @@ license : GPL v3
 Check github releases. Latest:
 
 [https://github.com/tennc/webshell/releases](https://github.com/tennc/webshell/releases)
+
+## Thank to [jetbrains](https://www.jetbrains.com/?from=webshell)
