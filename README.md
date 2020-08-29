@@ -39,16 +39,16 @@
 > ### 顺便在推一波网站管理工具
 > 1. 中国菜刀
 > 2. Cknife
-> 3. Altman
+> 3. [Altman](https://github.com/keepwn/Altman)
 > 4. xise
-> 5. Weevely
-> 6. quasibot
-> 7. Webshell-Sniper
-> 8. 蚁剑
-> 9. 冰蝎
-> 10. webacoo
-> 11. 哥斯拉
-> 12. PhpSploit
+> 5. [Weevely](https://github.com/epinna/weevely3)
+> 6. [quasibot](https://github.com/Smaash/quasibot)
+> 7. [Webshell-Sniper](https://github.com/WangYihang/Webshell-Sniper)
+> 8. [蚁剑 antSword](https://github.com/AntSwordProject/antSword)
+> 9. [冰蝎 Behinder](https://github.com/rebeyond/Behinder)
+> 10. [webacoo](https://github.com/anestisb/WeBaCoo)
+> 11. [哥斯拉 Godzilla](https://github.com/BeichenDream/Godzilla)
+> 12. [PhpSploit](https://github.com/nil0x42/phpsploit)
 > 13. 以上排名不分先后
 
 
