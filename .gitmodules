@@ -1,0 +1,60 @@
+[submodule "xl7dev/WebShell"]
+	path = xl7dev/WebShell
+	url = https://github.com/xl7dev/WebShell
+[submodule "JohnTroony/php-webshells"]
+	path = JohnTroony/php-webshells
+	url = https://github.com/JohnTroony/php-webshells
+[submodule "BlackArch/webshells"]
+	path = BlackArch/webshells
+	url = https://github.com/BlackArch/webshells
+[submodule "LandGrey/webshell-detect-bypass"]
+	path = LandGrey/webshell-detect-bypass
+	url = https://github.com/LandGrey/webshell-detect-bypass
+[submodule "JoyChou93/webshell"]
+	path = JoyChou93/webshell
+	url = https://github.com/JoyChou93/webshell
+[submodule "bartblaze/PHP-backdoors"]
+	path = bartblaze/PHP-backdoors
+	url = https://github.com/bartblaze/PHP-backdoors
+[submodule "WangYihang/Webshell-Sniper"]
+	path = WangYihang/Webshell-Sniper
+	url = https://github.com/WangYihang/Webshell-Sniper
+[submodule "threedr3am/JSP-Webshells"]
+	path = threedr3am/JSP-Webshells
+	url = https://github.com/threedr3am/JSP-Webshells
+[submodule "DeEpinGh0st/PHP-bypass-collection"]
+	path = DeEpinGh0st/PHP-bypass-collection
+	url = https://github.com/DeEpinGh0st/PHP-bypass-collection
+[submodule "lcatro/PHP-WebShell-Bypass-WAF"]
+	path = lcatro/PHP-WebShell-Bypass-WAF
+	url = https://github.com/lcatro/PHP-WebShell-Bypass-WAF
+[submodule "ysrc/webshell-sample"]
+	path = ysrc/webshell-sample
+	url = https://github.com/ysrc/webshell-sample
+[submodule "tanjiti/webshellSample"]
+	path = tanjiti/webshellSample
+	url = https://github.com/tanjiti/webshellSample
+[submodule "webshellpub/awsome-webshell"]
+	path = webshellpub/awsome-webshell
+	url = https://github.com/webshellpub/awsome-webshell
+[submodule "tdifg/WebShell"]
+	path = tdifg/WebShell
+	url = https://github.com/tdifg/WebShell
+[submodule "malwares/WebShell"]
+	path = malwares/WebShell
+	url = https://github.com/malwares/WebShell
+[submodule "lhlsec/webshell"]
+	path = lhlsec/webshell
+	url = https://github.com/lhlsec/webshell
+[submodule "oneoneplus/webshell"]
+	path = oneoneplus/webshell
+	url = https://github.com/oneoneplus/webshell
+[submodule "vnhacker1337/Webshell"]
+	path = vnhacker1337/Webshell
+	url = https://github.com/vnhacker1337/Webshell
+[submodule "backlion/webshell"]
+	path = backlion/webshell
+	url = https://github.com/backlion/webshell
+[submodule "AntSwordProject/AwesomeScript"]
+	path = AntSwordProject/AwesomeScript
+	url = https://github.com/AntSwordProject/AwesomeScript
