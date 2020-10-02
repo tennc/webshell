@@ -26,7 +26,7 @@
 > 5. 请自行鉴别
 
 
-> ### other webshell project (update 2020-09-14)
+> ### other webshell projects (update 2020-09-14)
 > 1. [xl7dev/WebShell](https://github.com/xl7dev/WebShell)
 > 2. [JohnTroony/php-webshells](https://github.com/JohnTroony/php-webshells)
 > 3. [BlackArch/webshells](https://github.com/BlackArch/webshells)
