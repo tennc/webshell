@@ -1,29 +1,30 @@
 ﻿webshell
 ========
-这是一个webshell收集项目
+This is a webshell collection project
 
-送人玫瑰，手有余香，如果各位下载了本项目，也请您能提交shell
+*Give someone a rose, there is a fragrance in your hand*  
+if you download this project, please also submit a shell
 
-本项目涵盖各种常用脚本
+This project covers various common scripts
 
-如：asp,aspx,php,jsp,pl,py
+Such as: asp, aspx, php, jsp, pl, py
 
-如提交各种webshell，请勿更改名称和密码
+If you submit a webshell, please do not change the name and password
 
-注意：所有shell 本人不保证是否有后门，但是自己上传的绝不会故意加后门
+Note: There is no guarantee whether there could be a backdoor in a shell, but I will never add a backdoor deliberately when uploading by myself
 
-各位提交的，也请勿加后门
+Please don’t add a backdoor if you submit
 
-如发现存在后门代码，请issues 。
+If you find a backdoor code, please create an issue immediately!
 
-本项目提供的工具，禁止从事非法活动，此项目，仅供测试，所造成的一切后果，与本人无关。
+The tools provided by this project are forbidden to engage in illegal activities. This project is for testing purposes only. All the consequences caused by it have nothing to do with me.
 
-> ### 在扩展一个项目 
+> ### Expanding a project 
 > 1. [webshell-venom](https://github.com/yzddmr6/webshell-venom)
-> 2. 免杀webshell无限生成工具
-> 3. 免杀webshell无限生成工具(免杀一句话生成|免杀D盾|免杀安全狗护卫神河马查杀等一切waf)
+> 2. Kill-free webshell unlimited generation tool
+> 3. Kill-free webshell unlimited generation tool (Kill-free one sentence generation|Kill-free D shield|Kill-free security dog guard God Hippo check and kill everything waf)
 > 4. Author : yzddmr6
-> 5. 请自行鉴别
+> 5. Please identify yourself
 
 
 > ### other webshell project (update 2020-09-14)
@@ -48,8 +49,8 @@
 > 19. [backlion/webshell](https://github.com/backlion/webshell)
 
 
-> ### 顺便在推一波网站管理工具
-> 1. 中国菜刀
+> ### By the way, we are pushing a wave of website management tools
+> 1. Chinese Kitchen Knife
 > 2. Cknife
 > 3. [Altman](https://github.com/keepwn/Altman)
 > 4. xise
@@ -61,7 +62,7 @@
 > 10. [webacoo](https://github.com/anestisb/WeBaCoo)
 > 11. [哥斯拉 Godzilla](https://github.com/BeichenDream/Godzilla)
 > 12. [PhpSploit](https://github.com/nil0x42/phpsploit)
-> 13. 以上排名不分先后
+> 13. The above rankings are in no particular order
 
 
 
