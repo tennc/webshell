@@ -1,5 +1,5 @@
 webshell
-[简体中文](https://github.com/tennc/webshell/blob/master/README_ZH.md)
+[简体中文](https://github.com/tennc/webshell/blob/master/README.md)
 ========
 This is a webshell collection project
 
