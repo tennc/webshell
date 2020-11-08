@@ -1,4 +1,5 @@
-﻿webshell
+webshell
+[简体中文](https://github.com/tennc/webshell/blob/master/README_ZH.md)
 ========
 This is a webshell collection project
 
