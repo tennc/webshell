@@ -47,7 +47,7 @@
 > 17. [oneoneplus/webshell](https://github.com/oneoneplus/webshell)
 > 18. [vnhacker1337/Webshell](https://github.com/vnhacker1337/Webshell)
 > 19. [backlion/webshell](https://github.com/backlion/webshell)
-
+> 20. [twepl/wso](https://github.com/twepl/wso) wso for php8
 
 > ### 顺便在推一波网站管理工具
 > 1. 中国菜刀
