@@ -77,3 +77,6 @@ Check github releases. Latest:
 [https://github.com/tennc/webshell/releases](https://github.com/tennc/webshell/releases)
 
 ## <img src="https://raw.githubusercontent.com/tennc/webshell/master/jetbrains.png" width="200"> Thanks to [Jetbrains](https://www.jetbrains.com/?from=webshell)
+
+[![Stargazers over time](https://starchart.cc/tennc/webshell.svg)](https://starchart.cc/tennc/webshell)
+
