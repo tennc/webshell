@@ -72,7 +72,7 @@ Author ：tennc
 
 http://tennc.github.io/webshell
 
-license : MIT
+license : GPL V3
 
 ## Download link
 Check github releases. Latest:
