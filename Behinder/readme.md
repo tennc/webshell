@@ -1,6 +1,6 @@
 ## [Behinder](https://github.com/rebeyond/Behinder)
 
-Author:@rebeyond
+Author:[rebeyond](https://github.com/rebeyond)
 
 Latest version updata Behinder_v4.0.2
 
