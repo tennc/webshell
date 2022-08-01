@@ -6,6 +6,9 @@ Download link:
 
 https://github.com/rebeyond/Behinder/releases
 
+How to use by video:
+
+https://www.bilibili.com/video/BV1TV4y1E7k4
 
 ### [ByPassBehinder / 冰蝎WebShell免杀生成](https://github.com/Tas9er/ByPassBehinder)
 
