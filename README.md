@@ -79,7 +79,7 @@ Check github releases. Latest:
 
 [https://github.com/tennc/webshell/releases](https://github.com/tennc/webshell/releases)
 
-## [Thank you to JetBrains for providing an OSS development license for their products](https://www.jetbrains.com/?from=webshell)
+## Many thanks to Jetbrains for providing us with an OSS licence for their fine development tools such as [Jetbrains tools](https://www.jetbrains.com/?from=webshell).
 
 ## 
 
