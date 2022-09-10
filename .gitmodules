@@ -58,3 +58,6 @@
 [submodule "AntSwordProject/AwesomeScript"]
 	path = AntSwordProject/AwesomeScript
 	url = https://github.com/AntSwordProject/AwesomeScript
+[submodule "cseroad/Webshell_Generate"]
+	path = cseroad/Webshell_Generate
+	url = https://github.com/cseroad/Webshell_Generate
