@@ -1,6 +1,3 @@
-[submodule "xl7dev/WebShell"]
-	path = xl7dev/WebShell
-	url = https://github.com/xl7dev/WebShell
 [submodule "JohnTroony/php-webshells"]
 	path = JohnTroony/php-webshells
 	url = https://github.com/JohnTroony/php-webshells
