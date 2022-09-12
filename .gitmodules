@@ -61,3 +61,6 @@
 [submodule "cseroad/Webshell_Generate"]
 	path = cseroad/Webshell_Generate
 	url = https://github.com/cseroad/Webshell_Generate
+[submodule "rexSurprise/webshell-free"]
+	path = rexSurprise/webshell-free
+	url = https://github.com/rexSurprise/webshell-free
