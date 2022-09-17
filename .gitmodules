@@ -64,3 +64,6 @@
 [submodule "rexSurprise/webshell-free"]
 	path = rexSurprise/webshell-free
 	url = https://github.com/rexSurprise/webshell-free
+[submodule "0xAbbarhSF/CTF-WebShells-"]
+	path = 0xAbbarhSF/CTF-WebShells-
+	url = https://github.com/0xAbbarhSF/CTF-WebShells-
