@@ -67,3 +67,6 @@
 [submodule "0xAbbarhSF/CTF-WebShells-"]
 	path = 0xAbbarhSF/CTF-WebShells-
 	url = https://github.com/0xAbbarhSF/CTF-WebShells-
+[submodule "zxc7528064/-WebShell-"]
+	path = zxc7528064/-WebShell-
+	url = https://github.com/zxc7528064/-WebShell-
