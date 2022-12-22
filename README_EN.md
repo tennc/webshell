@@ -1,24 +1,15 @@
 webshell
 [简体中文](https://github.com/tennc/webshell/blob/master/README.md)
 ========
-This is a webshell collection project
+### *“A bit of fragrance clings to the hand that gives flowers.“ ~ Chinese proverb*
 
-*Give someone a rose, there is a fragrance in your hand*  
-if you download this project, please also submit a shell
+This is a webshell collection project. Please submit a shell, if you download this project. When submitting a webshell, please <ins>do not</ins> change the name and password.
 
-This project covers various common scripts
+This project covers various common scripts, such as: asp, aspx, php, jsp, pl, py.
 
-Such as: asp, aspx, php, jsp, pl, py
+**Note**: There is no guarantee whether there could be a backdoor in a shell, but I will never add a backdoor deliberately when uploading by myself. Please <ins>do not</ins> add a backdoor if you submit. If you do find a backdoor code, please create an issue immediately!
 
-If you submit a webshell, please do not change the name and password
-
-Note: There is no guarantee whether there could be a backdoor in a shell, but I will never add a backdoor deliberately when uploading by myself
-
-Please don’t add a backdoor if you submit
-
-If you find a backdoor code, please create an issue immediately!
-
-The tools provided by this project are forbidden to engage in illegal activities. This project is for testing purposes only. All the consequences caused by it have nothing to do with me.
+**Disclaimer**: The tools provided by this project are forbidden to engage in illegal activities. This project is for testing purposes only. All the consequences caused by it have nothing to do with me.
 
 > ### Expanding a project 
 > 1. [webshell-venom](https://github.com/yzddmr6/webshell-venom)
@@ -67,15 +58,14 @@ The tools provided by this project are forbidden to engage in illegal activities
 
 
 
-Author ：tennc
+Author：[tennc](https://github.com/tennc)
 
-http://tennc.github.io/webshell
+Project: [Webshell](http://tennc.github.io/webshell)
 
-license : GPL v3
+## License
+[GPL v3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 ## Download link
-Check github releases. Latest:
-
-[https://github.com/tennc/webshell/releases](https://github.com/tennc/webshell/releases)
+Check GitHub for new releases: [https://github.com/tennc/webshell/releases](https://github.com/tennc/webshell/releases)
 
 ## [Thank you to JetBrains for providing an OSS development license for their products](https://www.jetbrains.com/?from=webshell)
