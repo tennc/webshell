@@ -81,8 +81,8 @@ Check github releases. Latest:
 
 ## Many thanks to Jetbrains for providing us with an OSS licence for their fine development tools such as [Jetbrains tools](https://www.jetbrains.com/?from=webshell).
 
-## 
 
 [![Stargazers over time](https://starchart.cc/tennc/webshell.svg)](https://starchart.cc/tennc/webshell)
+
 
 
