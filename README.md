@@ -40,16 +40,15 @@
 > 8. [threedr3am/JSP-Webshells](https://github.com/threedr3am/JSP-Webshells)
 > 9. [DeEpinGh0st/PHP-bypass-collection](https://github.com/DeEpinGh0st/PHP-bypass-collection)
 > 10. [lcatro/PHP-WebShell-Bypass-WAF](https://github.com/lcatro/PHP-WebShell-Bypass-WAF)
-> 11. [ysrc/webshell-sample](https://github.com/ysrc/webshell-sample)
-> 12. [tanjiti/webshellSample](https://github.com/tanjiti/webshellSample)
-> 13. [webshellpub/awsome-webshell](https://github.com/webshellpub/awsome-webshell)
-> 14. [tdifg/WebShell](https://github.com/tdifg/WebShell)
-> 15. [malwares/WebShell](https://github.com/malwares/WebShell)
-> 16. [lhlsec/webshell](https://github.com/lhlsec/webshell)
-> 17. [oneoneplus/webshell](https://github.com/oneoneplus/webshell)
-> 18. [vnhacker1337/Webshell](https://github.com/vnhacker1337/Webshell)
-> 19. [backlion/webshell](https://github.com/backlion/webshell)
-> 20. [twepl/wso](https://github.com/twepl/wso) wso for php8
+> 11. [tanjiti/webshellSample](https://github.com/tanjiti/webshellSample)
+> 12. [webshellpub/awsome-webshell](https://github.com/webshellpub/awsome-webshell)
+> 13. [tdifg/WebShell](https://github.com/tdifg/WebShell)
+> 14. [malwares/WebShell](https://github.com/malwares/WebShell)
+> 15. [lhlsec/webshell](https://github.com/lhlsec/webshell)
+> 16. [oneoneplus/webshell](https://github.com/oneoneplus/webshell)
+> 17. [vnhacker1337/Webshell](https://github.com/vnhacker1337/Webshell)
+> 18. [backlion/webshell](https://github.com/backlion/webshell)
+> 19. [twepl/wso](https://github.com/twepl/wso) wso for php8
 
 > ### 顺便在推一波网站管理工具
 > 1. 中国菜刀
