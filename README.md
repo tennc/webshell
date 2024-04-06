@@ -1,4 +1,4 @@
-# webshell | [English](https://github.com/tennc/webshell/blob/master/README_EN.md)  | [Türkiye](https://github.com/tennc/webshell/blob/master/README_tr.md)
+# webshell | [English](https://github.com/tennc/webshell/blob/master/README_EN.md)  | [Türkiye](https://github.com/tennc/webshell/blob/master/README_TR.md)
 
 这是一个webshell收集项目
 
