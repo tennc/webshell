@@ -49,6 +49,7 @@
 > 17. [vnhacker1337/Webshell](https://github.com/vnhacker1337/Webshell)
 > 18. [backlion/webshell](https://github.com/backlion/webshell)
 > 19. [twepl/wso](https://github.com/twepl/wso) wso for php8
+> 20. [flozz/p0wny-shell](https://github.com/flozz/p0wny-shell) p0wny-shell
 
 > ### 顺便在推一波网站管理工具
 > 1. 中国菜刀
