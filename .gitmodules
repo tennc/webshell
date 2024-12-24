@@ -73,3 +73,6 @@
 [submodule "xl7dev/WebShell"]
 	path = xl7dev/WebShell
 	url = https://github.com/xl7dev/WebShell
+[submodule "xl7dev/WebShell/Other/Webshell"]
+    path = xl7dev/WebShell/Other/Webshell
+    url = https://github.com/xl7dev/WebShell
